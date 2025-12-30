@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
-import java.net.URL;
 import java.util.List;
 
 @RestController
@@ -22,7 +21,7 @@ public class ClientController {
     //Endpoint para listar todos os clientes
     @GetMapping
     public List<ClientDTO> getAllClients(){
-        List<Client> clients = service.getAllClients();
+        List<ClientModel> clients = service.getAllClients();
         return clients.stream()
             .map(client -> new ClientDTO(client.getId(), client.getName(), client.getEmail(), client.getPhone()))
             .toList();
