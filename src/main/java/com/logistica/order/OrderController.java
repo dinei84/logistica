@@ -26,7 +26,8 @@ public class OrderController {
                         orderModel.getId(),
                         orderModel.getOrderNumber(),
                         orderModel.getProduct(),
-                        orderModel.getPackaging()
+                        orderModel.getPackaging(),
+                        orderModel.getRecipient()
                 ))
                 .toList();
     }

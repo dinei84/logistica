@@ -15,12 +15,12 @@ public class OrderService {
 
     // Salvar Ordem
     public OrderDTO saveOrder(OrderDTO orderDTO){
-        OrderModel order = new OrderModel();
-        order.setOrderNumber(order.getOrderNumber());
-        order.setProduct(order.getProduct());
-        order.setPackaging(order.getPackaging());
+        OrderModel order = new OrderModel(orderDTO.product(), orderDTO.packaging(), orderDTO.recipient());
+        order.setProduct(orderDTO.product());
+        order.setPackaging(orderDTO.packaging());
+        order.setRecipient(orderDTO.recipient());
         OrderModel savedOrder = repository.save(order);
-        return new OrderDTO(savedOrder.getId(), savedOrder.getOrderNumber(), savedOrder.getProduct(), savedOrder.getPackaging());
+        return new OrderDTO(savedOrder.getId(), savedOrder.getOrderNumber(), savedOrder.getProduct(), savedOrder.getPackaging(), savedOrder.getRecipient());
     }
 
     //Listar todas as Ordens
@@ -35,7 +35,8 @@ public class OrderService {
                         orderModel.getId(),
                         orderModel.getOrderNumber(),
                         orderModel.getProduct(),
-                        orderModel.getPackaging()
+                        orderModel.getPackaging(),
+                        orderModel.getRecipient()
                 ))
                 .orElse(null);
     }
@@ -44,11 +45,15 @@ public class OrderService {
     public OrderDTO updateOrder(Long id, OrderDTO orderDTO){
         OrderModel order = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Order not found"));
-        order.setOrderNumber(orderDTO.orderNumber());
+        // Apenas atualiza o número do pedido se um novo valor for fornecido
+        if (orderDTO.orderNumber() != null) {
+            order.setOrderNumber(orderDTO.orderNumber());
+        }
         order.setProduct(orderDTO.product());
         order.setPackaging(orderDTO.packaging());
+        order.setRecipient(orderDTO.recipient());
         OrderModel updatedOrder = repository.save(order);
-        return new OrderDTO(updatedOrder.getId(), updatedOrder.getOrderNumber(), updatedOrder.getProduct(), updatedOrder.getPackaging());
+        return new OrderDTO(updatedOrder.getId(), updatedOrder.getOrderNumber(), updatedOrder.getProduct(), updatedOrder.getPackaging(), updatedOrder.getRecipient());
     }
 
     // Deletar Ordem

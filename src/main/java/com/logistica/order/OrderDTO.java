@@ -4,7 +4,8 @@ public record OrderDTO(
     Long id,
     String orderNumber,
     String product,
-    String packaging
+    String packaging,
+    String recipient
 ) {
 }
 
