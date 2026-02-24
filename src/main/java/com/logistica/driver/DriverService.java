@@ -1,6 +1,8 @@
 package com.logistica.driver;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -25,7 +27,7 @@ public class DriverService {
     //Listar motorista por id
     public DriverDTO getDriverById(Long id){
         DriverModel driver = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Driver not found"));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Driver not found"));
         return new DriverDTO(driver.getId(), driver.getName(), driver.getCpf(), driver.getPhone());
     }
 
@@ -42,7 +44,7 @@ public class DriverService {
     //Atualizar motorista existente
     public DriverDTO updateDriver(Long id, DriverDTO driverDTO){
         DriverModel driver = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Driver not found"));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Driver not found"));
         driver.setName(driverDTO.name());
         driver.setPhone(driverDTO.phone());
         driver.setCpf(driverDTO.cpf());

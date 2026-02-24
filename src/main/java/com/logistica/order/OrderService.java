@@ -1,6 +1,8 @@
 package com.logistica.order;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -24,13 +26,9 @@ public class OrderService {
     }
 
     //Listar todas as Ordens
-    public List<OrderModel> getAllOrders(){
-        return repository.findAll();
-    }
-
-    // Buscar Ordem por ID
-    public OrderDTO getOrderById(Long id){
-        return repository.findById(id)
+    public List<OrderDTO> getAllOrders(){
+        List<OrderModel> orders = repository.findAll();
+        return orders.stream()
                 .map(orderModel -> new OrderDTO(
                         orderModel.getId(),
                         orderModel.getOrderNumber(),
@@ -38,13 +36,20 @@ public class OrderService {
                         orderModel.getPackaging(),
                         orderModel.getRecipient()
                 ))
-                .orElse(null);
+                .toList();
+    }
+
+    // Buscar Ordem por ID
+    public OrderDTO getOrderById(Long id){
+        OrderModel order = repository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Order not found"));
+        return new OrderDTO(order.getId(), order.getOrderNumber(), order.getProduct(), order.getPackaging(), order.getRecipient());
     }
 
     //Atualizar Ordem
     public OrderDTO updateOrder(Long id, OrderDTO orderDTO){
         OrderModel order = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Order not found"));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Order not found"));
         // Apenas atualiza o número do pedido se um novo valor for fornecido
         if (orderDTO.orderNumber() != null) {
             order.setOrderNumber(orderDTO.orderNumber());

@@ -21,10 +21,7 @@ public class ClientController {
     //Endpoint para listar todos os clientes
     @GetMapping
     public List<ClientDTO> getAllClients(){
-        List<ClientModel> clients = service.getAllClients();
-        return clients.stream()
-            .map(client -> new ClientDTO(client.getId(), client.getName(), client.getEmail(), client.getPhone()))
-            .toList();
+        return service.getAllClients();
     }
 
     //Endpoint para listar Cliente por Id

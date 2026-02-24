@@ -29,5 +29,8 @@ public class VehicleModel {
 
     @Column(name = "plate4")
     private String plate4;
+
+    public VehicleModel(){}
+
 }
 

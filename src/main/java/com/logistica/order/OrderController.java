@@ -20,16 +20,7 @@ public class OrderController {
     // Endpoint de listar todas as ordens
     @GetMapping
     public List<OrderDTO> getAllOrders(){
-        List<OrderModel> oreder = service.getAllOrders();
-        return oreder.stream()
-                .map(orderModel -> new OrderDTO(
-                        orderModel.getId(),
-                        orderModel.getOrderNumber(),
-                        orderModel.getProduct(),
-                        orderModel.getPackaging(),
-                        orderModel.getRecipient()
-                ))
-                .toList();
+        return service.getAllOrders();
     }
 
     // Endpoint de buscar ordem por ID

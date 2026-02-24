@@ -1,6 +1,8 @@
 package com.logistica.client;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -14,14 +16,17 @@ public class ClientService {
     }
 
     //Listar todos os clientes
-    public List<ClientModel> getAllClients(){
-        return repository.findAll();
+    public List<ClientDTO> getAllClients(){
+        List<ClientModel> clients = repository.findAll();
+        return clients.stream()
+            .map(client -> new ClientDTO(client.getId(), client.getName(), client.getEmail(), client.getPhone()))
+            .toList();
     }
 
     //Listar clientes por Id
     public ClientDTO getClientById(Long id) {
         ClientModel client = repository.findById(id)
-            .orElseThrow(() -> new RuntimeException("Client not found"));
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Client not found"));
         return new ClientDTO(client.getId(), client.getName(), client.getEmail(), client.getPhone());
     }
 
@@ -38,7 +43,7 @@ public class ClientService {
     //Atualizar cliente existente
     public ClientDTO updateClient(Long id, ClientDTO clientDTO) {
         ClientModel client = repository.findById(id)
-            .orElseThrow(() -> new RuntimeException("Client not found"));
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Client not found"));
         client.setName(clientDTO.name());
         client.setEmail(clientDTO.email());
         client.setPhone(clientDTO.phone());

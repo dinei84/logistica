@@ -2,7 +2,9 @@ package com.logistica.vehicle;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 @Service
 public class VehicleService {
@@ -13,6 +15,24 @@ public class VehicleService {
         this.repository = repository;
     }
 
+    //Salvar Veiculo
+    public VehicleDTO saveVehicle(VehicleDTO vehicleDTO){
+        // Validação: Verifica se os campos obrigatórios estão presentes
+        if (vehicleDTO.vehicleType() == null || vehicleDTO.vehicleType().isBlank() ||
+            vehicleDTO.plate() == null || vehicleDTO.plate().isBlank()) {
+            throw new IllegalArgumentException("O Tipo do veículo e a Placa são obrigatórios.");
+        }
+
+        VehicleModel vehicle = new VehicleModel();
+        vehicle.setVehicleType(vehicleDTO.vehicleType());
+        vehicle.setPlate(vehicleDTO.plate());
+        vehicle.setPlate2(vehicleDTO.plate2());
+        vehicle.setPlate3(vehicleDTO.plate3());
+        vehicle.setPlate4(vehicleDTO.plate4());
+        VehicleModel savedVehicle = repository.save(vehicle);
+        return new VehicleDTO(savedVehicle.getId(), savedVehicle.getVehicleType(), savedVehicle.getPlate(), savedVehicle.getPlate2(), savedVehicle.getPlate3(), savedVehicle.getPlate4());
+    }
+
     //Listar todos os Veiculos
     public List<VehicleDTO> getAllVehicles(){
         List<VehicleModel> vehicles = repository.findAll();
@@ -20,6 +40,38 @@ public class VehicleService {
                 .map(vehicle -> new VehicleDTO(vehicle.getId(), vehicle.getVehicleType(), vehicle.getPlate(), vehicle.getPlate2(), vehicle.getPlate3(), vehicle.getPlate4()))
                 .toList();
     }
+
+    //Listar Veiculos por ID
+    public VehicleDTO getVehicleId(Long id){
+        VehicleModel vehicle = repository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Vehicle not found"));
+        return new VehicleDTO(vehicle.getId(), vehicle.getVehicleType(), vehicle.getPlate(), vehicle.getPlate2(), vehicle.getPlate3(), vehicle.getPlate4());
+    }
+
+    //Atualizar Veiculo
+    public VehicleDTO updateVehicle(Long id, VehicleDTO vehicleDTO){
+        VehicleModel vehicle = repository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Vehicle not found"));
+
+        if (vehicleDTO.vehicleType() == null || vehicleDTO.vehicleType().isBlank() ||
+                vehicleDTO.plate() == null || vehicleDTO.plate().isBlank()) {
+            throw new IllegalArgumentException("O Tipo do veículo e a Placa são obrigatórios.");
+        }
+
+        vehicle.setVehicleType(vehicleDTO.vehicleType());
+        vehicle.setPlate(vehicleDTO.plate());
+        vehicle.setPlate2(vehicleDTO.plate2());
+        vehicle.setPlate3(vehicleDTO.plate3());
+        vehicle.setPlate4(vehicleDTO.plate4());
+        VehicleModel updateVehicle = repository.save(vehicle);
+        return new VehicleDTO(updateVehicle.getId(), updateVehicle.getVehicleType(), updateVehicle.getPlate(), updateVehicle.getPlate2(), updateVehicle.getPlate3(), updateVehicle.getPlate4());
+    }
+
+    //Deletar Veiculo
+    public void deleteVehicle(Long id){
+        repository.deleteById(id);
+    }
+
 
     
 
