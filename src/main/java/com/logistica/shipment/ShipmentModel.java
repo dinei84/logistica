@@ -1,12 +1,10 @@
 package com.logistica.shipment;
 
 import java.sql.Date;
-
 import com.logistica.collaborator.CollaboratorModel;
 import com.logistica.driver.DriverModel;
 import com.logistica.order.OrderModel;
 import com.logistica.vehicle.VehicleModel;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,85 +24,85 @@ public class ShipmentModel {
     private Long id;
 
     private Date date;
-    private Long vehicleId;
-    private Long driverId;
-    private Long orderId;
-    private Long collaboratorId;
 
-    public ShipmentModel() {
-    }
-    public ShipmentModel(Long id, Date date, Long vehicleId, Long driverId, Long orderId, Long collaboratorId) {
-        this.id = id;
-        this.date = date;
-        this.vehicleId = vehicleId;
-        this.driverId = driverId;
-        this.orderId = orderId;
-        this.collaboratorId = collaboratorId;
-    }
-
-    //Relacionamentos com outras entidades
+    // ✅ APENAS os relacionamentos (sem os campos de ID)
     @ManyToOne
     @JoinColumn(name = "vehicle_id")
     private VehicleModel vehicle;
+
     @ManyToOne
     @JoinColumn(name = "driver_id")
     private DriverModel driver;
+
     @ManyToOne
     @JoinColumn(name = "order_id")
     private OrderModel order;
+
     @ManyToOne
     @JoinColumn(name = "collaborator_id")
     private CollaboratorModel collaborator;
 
+    public ShipmentModel() {
+    }
 
+    public ShipmentModel(Long id, Date date, VehicleModel vehicle,
+                         DriverModel driver, OrderModel order,
+                         CollaboratorModel collaborator) {
+        this.id = id;
+        this.date = date;
+        this.vehicle = vehicle;
+        this.driver = driver;
+        this.order = order;
+        this.collaborator = collaborator;
+    }
 
-    //Getters e Setters
+    // ✅ Getters e Setters (Lombok @Data já gera, mas se quiser explícitos:
     public VehicleModel getVehicle() {
         return vehicle;
     }
-    public DriverModel getDriver() {
-        return driver;
+
+    public Date getDate() {
+        return date;
     }
-    public OrderModel getOrder() {
-        return order;
+
+    public void setDate(Date date) {
+        this.date = date;
     }
-    public CollaboratorModel getCollaborator() {
-        return collaborator;
+
+    public Long getId() {
+        return id;
     }
-    public Long getVehicleId() {
-        return vehicleId;
+
+    public void setId(Long id) {
+        this.id = id;
     }
-    public Long getDriverId() {
-        return driverId;
-    }
-    public Long getOrderId() {
-        return orderId;
-    }
-    public Long getCollaboratorId() {
-        return collaboratorId;
-    }
+
     public void setVehicle(VehicleModel vehicle) {
         this.vehicle = vehicle;
     }
+
+    public DriverModel getDriver() {
+        return driver;
+    }
+
     public void setDriver(DriverModel driver) {
         this.driver = driver;
     }
+
+    public OrderModel getOrder() {
+        return order;
+    }
+
     public void setOrder(OrderModel order) {
         this.order = order;
     }
+
+    public CollaboratorModel getCollaborator() {
+        return collaborator;
+    }
+
     public void setCollaborator(CollaboratorModel collaborator) {
         this.collaborator = collaborator;
     }
-    public void setVehicleId(Long vehicleId) {
-        this.vehicleId = vehicleId;
-    }
-    public void setDriverId(Long driverId) {
-        this.driverId = driverId;
-    }
-    public void setOrderId(Long orderId) {
-        this.orderId = orderId;
-    }
-    public void setCollaboratorId(Long collaboratorId) {
-        this.collaboratorId = collaboratorId;
-    }
+
 }
