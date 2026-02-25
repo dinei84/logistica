@@ -4,7 +4,7 @@ import java.util.Date;
 
 public record ShipmentDTO(
         Long id,
-        Date data,
+        Date date,
         Long vehicleId,
         Long driverId,
         Long orderId,

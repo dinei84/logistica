@@ -2,6 +2,6 @@ package com.logistica.collaborator;
 
 public record CollaboratorDTO(
         Long id,
-        String nome
+        String name
 ) {
 }

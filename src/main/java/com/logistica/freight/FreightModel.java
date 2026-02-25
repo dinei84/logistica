@@ -1,4 +1,86 @@
 package com.logistica.freight;
 
+import java.math.BigDecimal;
+
+import com.logistica.client.ClientModel;
+import com.logistica.shipment.ShipmentModel;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name = "freight")
 public class FreightModel {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String infoBasic;
+    private BigDecimal quantity;
+    private BigDecimal value;
+    private String infoAdditional;
+
+    private Long clientId;
+    private Long shipmentId;
+
+    public FreightModel() {
+    }
+
+    public FreightModel(Long id, String infoBasic, BigDecimal quantity, BigDecimal value, String infoAdditional, Long clientId, Long shipmentId) {
+        this.id = id;
+        this.infoBasic = infoBasic;
+        this.quantity = quantity;
+        this.value = value;
+        this.infoAdditional = infoAdditional;
+        this.clientId = clientId;
+        this.shipmentId = shipmentId;
+    }
+
+    //Relacionamentos com outras entidades
+    @ManyToOne
+    @JoinColumn(name = "client_id")
+    private ClientModel client;
+
+    @ManyToOne
+    @JoinColumn(name = "shipment_id")
+    private ShipmentModel shipment;
+    public Long getClientId() {
+        return clientId;
+    }
+    public Long getShipmentId() {
+        return shipmentId;
+    }
+    public void setClientId(Long clientId) {
+        this.clientId = clientId;
+    }
+    public void setShipmentId(Long shipmentId) {
+        this.shipmentId = shipmentId;
+    }
+    public void setClient(ClientModel client) {
+        this.client = client;
+    }
+    public void setShipment(ShipmentModel shipment) {
+        this.shipment = shipment;
+    }
+    public ClientModel getClient() {
+        return client;
+    }
+    public ShipmentModel getShipment() {
+        return shipment;
+    }
 }
+
+
+
+
+
+
+
