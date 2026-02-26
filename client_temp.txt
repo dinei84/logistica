@@ -1,4 +1,4 @@
-package com.logistica.client;
+﻿package com.logistica.client;
 
 import org.springframework.stereotype.Service;
 import com.logistica.exception.ResourceNotFoundException;

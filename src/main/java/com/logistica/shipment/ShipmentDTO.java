@@ -1,13 +1,12 @@
 package com.logistica.shipment;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public record ShipmentDTO(
-        Long id,
-        Date date,
-        Long vehicleId,
-        Long driverId,
-        Long orderId,
-        Long collaboratorId
-) {
+                Long id,
+                LocalDate date,
+                Long vehicleId,
+                Long driverId,
+                Long orderId,
+                Long collaboratorId) {
 }

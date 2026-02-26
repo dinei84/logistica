@@ -1,9 +1,9 @@
 package com.logistica.collaborator;
 
+import com.logistica.exception.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -24,8 +24,9 @@ public class CollaboratorService {
 
     //Obter um colaborador por ID
     public CollaboratorDTO getCollaboratorById(Long id){
-        Optional<CollaboratorModel> opt = repository.findById(id);
-        return opt.map(this::toDTO).orElse(null);
+        CollaboratorModel model = repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Colaborador não encontrado"));
+        return toDTO(model);
     }
 
     //Obter todos os colaboradores
@@ -35,14 +36,11 @@ public class CollaboratorService {
 
     //Atualizar um colaborador existente
     public CollaboratorDTO updateCollaborator(Long id, CollaboratorDTO collaborator) {
-        Optional<CollaboratorModel> opt = repository.findById(id);
-        if (opt.isPresent()) {
-            CollaboratorModel model = opt.get();
-            model.setNome(collaborator.name());
-            CollaboratorModel saved = repository.save(model);
-            return toDTO(saved);
-        }
-        return null;
+        CollaboratorModel model = repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Colaborador não encontrado"));
+        model.setNome(collaborator.name());
+        CollaboratorModel saved = repository.save(model);
+        return toDTO(saved);
     }
 
     //Excluir um colaborador por ID
@@ -61,3 +59,5 @@ public class CollaboratorService {
         return new CollaboratorDTO(model.getId(), model.getNome());
     }
 }
+
+

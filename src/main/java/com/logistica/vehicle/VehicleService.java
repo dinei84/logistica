@@ -2,9 +2,9 @@ package com.logistica.vehicle;
 
 import java.util.List;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
+import com.logistica.exception.BadRequestException;
+import com.logistica.exception.ResourceNotFoundException;
 
 @Service
 public class VehicleService {
@@ -20,7 +20,7 @@ public class VehicleService {
         // Validação: Verifica se os campos obrigatórios estão presentes
         if (vehicleDTO.vehicleType() == null || vehicleDTO.vehicleType().isBlank() ||
             vehicleDTO.plate() == null || vehicleDTO.plate().isBlank()) {
-            throw new IllegalArgumentException("O Tipo do veículo e a Placa são obrigatórios.");
+            throw new BadRequestException("O Tipo do veículo e a Placa são obrigatórios.");
         }
 
         VehicleModel vehicle = new VehicleModel();
@@ -44,18 +44,18 @@ public class VehicleService {
     //Listar Veiculos por ID
     public VehicleDTO getVehicleId(Long id){
         VehicleModel vehicle = repository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Vehicle not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("Veículo não encontrado"));
         return new VehicleDTO(vehicle.getId(), vehicle.getVehicleType(), vehicle.getPlate(), vehicle.getPlate2(), vehicle.getPlate3(), vehicle.getPlate4());
     }
 
     //Atualizar Veiculo
     public VehicleDTO updateVehicle(Long id, VehicleDTO vehicleDTO){
         VehicleModel vehicle = repository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Vehicle not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("Veículo não encontrado"));
 
         if (vehicleDTO.vehicleType() == null || vehicleDTO.vehicleType().isBlank() ||
                 vehicleDTO.plate() == null || vehicleDTO.plate().isBlank()) {
-            throw new IllegalArgumentException("O Tipo do veículo e a Placa são obrigatórios.");
+            throw new BadRequestException("O Tipo do veículo e a Placa são obrigatórios.");
         }
 
         vehicle.setVehicleType(vehicleDTO.vehicleType());
@@ -78,3 +78,8 @@ public class VehicleService {
 
 
 }
+
+
+
+
+

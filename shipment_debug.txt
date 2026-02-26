@@ -1,6 +1,6 @@
-package com.logistica.shipment;
+﻿package com.logistica.shipment;
 
-import java.time.LocalDate;
+import java.sql.Date;
 import com.logistica.collaborator.CollaboratorModel;
 import com.logistica.driver.DriverModel;
 import com.logistica.order.OrderModel;
@@ -23,9 +23,9 @@ public class ShipmentModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDate date;
+    private Date date;
 
-    // APENAS os Relacionamentos
+    //APENAS os Relacionamentos
     @ManyToOne
     @JoinColumn(name = "vehicle_id")
     private VehicleModel vehicle;
@@ -45,9 +45,9 @@ public class ShipmentModel {
     public ShipmentModel() {
     }
 
-    public ShipmentModel(Long id, LocalDate date, VehicleModel vehicle,
-            DriverModel driver, OrderModel order,
-            CollaboratorModel collaborator) {
+    public ShipmentModel(Long id, Date date, VehicleModel vehicle,
+                         DriverModel driver, OrderModel order,
+                         CollaboratorModel collaborator) {
         this.id = id;
         this.date = date;
         this.vehicle = vehicle;
@@ -61,11 +61,11 @@ public class ShipmentModel {
         return vehicle;
     }
 
-    public LocalDate getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
