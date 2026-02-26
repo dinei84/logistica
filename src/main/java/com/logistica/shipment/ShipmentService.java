@@ -6,6 +6,8 @@ import com.logistica.driver.DriverRepository;
 import com.logistica.order.OrderRepository;
 import com.logistica.vehicle.VehicleRepository;
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.logistica.exception.BadRequestException;
@@ -146,5 +148,9 @@ public class ShipmentService {
                 }
 
                 return shipmentRepository.save(shipment);
+        }
+
+        public Page<ShipmentModel> findAll(Pageable pageable){
+            return shipmentRepository.findAll(pageable);
         }
 }

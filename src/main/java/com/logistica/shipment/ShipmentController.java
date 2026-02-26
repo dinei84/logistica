@@ -1,7 +1,12 @@
 package com.logistica.shipment;
 
+import org.hibernate.query.Page;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.awt.print.Pageable;
 
 @RestController
 @RequestMapping("/shipments")
@@ -31,6 +36,15 @@ public class ShipmentController {
     public ResponseEntity<Void> deleteShipment(@PathVariable Long id) {
         service.removeVehicle(id);
         return ResponseEntity.noContent().build();
+    }
+
+
+    //Pageable para procura geral
+    @GetMapping
+    public ResponseEntity<Page> getAllShipments(
+            @PageableDefault(size = 20, sort = "id", direction = Sort.Direction.ASC)Pageable pageable
+            ){
+        Page<>
     }
 
 }
