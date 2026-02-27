@@ -3,6 +3,7 @@ package com.logistica.exception;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -23,17 +24,26 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(IllegalArgumentException.class)
-    public ResponseEntity<ErrorResponse> handleIllegalArgument(IllegalArgumentException ex, HttpServletRequest request) {
+    public ResponseEntity<ErrorResponse> handleIllegalArgument(IllegalArgumentException ex,
+            HttpServletRequest request) {
         return buildResponse(HttpStatus.BAD_REQUEST, ex.getMessage(), request);
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<ErrorResponse> handleValidation(MethodArgumentNotValidException ex, HttpServletRequest request) {
+    public ResponseEntity<ErrorResponse> handleValidation(MethodArgumentNotValidException ex,
+            HttpServletRequest request) {
         String message = ex.getBindingResult().getFieldErrors().stream()
                 .map(error -> error.getField() + ": " + error.getDefaultMessage())
                 .findFirst()
                 .orElse("Falha de validação");
         return buildResponse(HttpStatus.BAD_REQUEST, message, request);
+    }
+
+    @ExceptionHandler(HttpMediaTypeNotSupportedException.class)
+    public ResponseEntity<ErrorResponse> handleUnsupportedMediaType(HttpMediaTypeNotSupportedException ex,
+            HttpServletRequest request) {
+        String message = "Content-Type '" + ex.getContentType() + "' não suportado. Use 'application/json'.";
+        return buildResponse(HttpStatus.UNSUPPORTED_MEDIA_TYPE, message, request);
     }
 
     @ExceptionHandler(Exception.class)
@@ -47,8 +57,7 @@ public class GlobalExceptionHandler {
                 status.value(),
                 status.getReasonPhrase(),
                 message,
-                request.getRequestURI()
-        );
+                request.getRequestURI());
         return ResponseEntity.status(status).body(body);
     }
 }
