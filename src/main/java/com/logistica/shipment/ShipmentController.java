@@ -1,12 +1,11 @@
 package com.logistica.shipment;
 
-import org.hibernate.query.Page;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.awt.print.Pageable;
 
 @RestController
 @RequestMapping("/shipments")
@@ -24,27 +23,25 @@ public class ShipmentController {
         return ResponseEntity.ok(shipment);
     }
 
-    @PutMapping("{id}/vehicle")
-    public ResponseEntity<ShipmentModel> updateVehicle(
-            @PathVariable Long id,
-            @RequestParam Long vehicleId) {
-        ShipmentModel shipment = service.updateVehicle(id, vehicleId);
-        return ResponseEntity.ok(shipment);
+    @PutMapping("/{id}")
+    public ResponseEntity<ShipmentModel> update(@PathVariable Long id, @RequestBody ShipmentDTO dto) {
+        return ResponseEntity.ok(service.update(id, dto));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteShipment(@PathVariable Long id) {
-        service.removeVehicle(id);
+        service.deleteShipment(id);
         return ResponseEntity.noContent().build();
     }
 
 
     //Pageable para procura geral
     @GetMapping
-    public ResponseEntity<Page> getAllShipments(
-            @PageableDefault(size = 20, sort = "id", direction = Sort.Direction.ASC)Pageable pageable
+    public ResponseEntity<Page<ShipmentModel>> getAllShipments(
+            @PageableDefault(size = 20, sort = "id", direction = Sort.Direction.ASC) Pageable pageable
             ){
-        Page<>
+        Page<ShipmentModel> shipmentPage = service.findAll(pageable);
+        return ResponseEntity.ok(shipmentPage);
     }
 
 }

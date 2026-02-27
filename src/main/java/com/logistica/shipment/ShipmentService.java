@@ -71,86 +71,55 @@ public class ShipmentService {
                 }
         }
 
-        @Transactional
-        public ShipmentModel updateVehicle(Long shipmenId, Long vehicleId) {
-                ShipmentModel shipment = shipmentRepository.findById(shipmenId)
-                                .orElseThrow(() -> new ResourceNotFoundException("Carregamento não encontrado"));
-
-                VehicleModel vehicle = vehicleRepository.findById(vehicleId)
-                                .orElseThrow(() -> new ResourceNotFoundException("Veículo não encontrado"));
-
-                shipment.setVehicle(vehicle);
-                return shipmentRepository.save(shipment);
-        }
-
-        @Transactional
-        public ShipmentModel updateDriver(Long shipmentId, Long driverId) {
-                ShipmentModel shipment = shipmentRepository.findById(shipmentId)
-                                .orElseThrow(() -> new ResourceNotFoundException("Carregamento não encontrado"));
-
-                DriverModel driver = driverRepository.findById(driverId)
-                                .orElseThrow(() -> new ResourceNotFoundException("Motorista não encontrado"));
-
-                shipment.setDriver(driver);
-                return shipmentRepository.save(shipment);
-        }
-
-        @Transactional
-        public ShipmentModel updateVehicle(Long shipmentId) {
-                ShipmentModel shipment = shipmentRepository.findById(shipmentId)
-                                .orElseThrow(() -> new ResourceNotFoundException("Carregamento não encontrado"));
-
-                shipment.setVehicle(null);
-                return shipmentRepository.save(shipment);
-        }
-
-        @Transactional
-        public void removeVehicle(Long shipmentId) {
-                ShipmentModel shipment = shipmentRepository.findById(shipmentId)
-                                .orElseThrow(() -> new ResourceNotFoundException("Carregamento não encontrado"));
-
-                shipment.setVehicle(null);
-                shipmentRepository.save(shipment);
-        }
-
         // Metodo generico para atualizar tudo de uma vez
         @Transactional
-        public ShipmentModel updateShipmentResourses(Long shipmentID,
-                        Long vehicleId,
-                        Long driverId,
-                        Long orderId,
-                        Long collaboratorId) {
-                ShipmentModel shipment = shipmentRepository.findById(shipmentID)
-                                .orElseThrow(() -> new ResourceNotFoundException("Carregamento não encontrado"));
+        public ShipmentModel update(Long id, ShipmentDTO dto) {
+                ShipmentModel shipment = shipmentRepository.findById(id)
+                       .orElseThrow(() -> new ResourceNotFoundException("Entrega não encontrada"));
 
-                if (vehicleId != null) {
-                        VehicleModel vehicle = vehicleRepository.findById(vehicleId)
-                                        .orElseThrow(() -> new ResourceNotFoundException("Veículo não encontrado"));
+                //Atualiza a data se houver no DTO
+                if (dto.date() != null) {
+                        shipment.setDate(dto.date());
+                }
+
+                //Atualiza as assossiações
+                if (dto.vehicleId() != null){
+                        VehicleModel vehicle = vehicleRepository.findById(dto.vehicleId())
+                                .orElseThrow(() -> new ResourceNotFoundException("Veículo não encontrado"));
                         shipment.setVehicle(vehicle);
                 }
 
-                if (driverId != null) {
-                        DriverModel driver = driverRepository.findById(driverId)
-                                        .orElseThrow(() -> new ResourceNotFoundException("Motorista não encontrado"));
+                if (dto.driverId() != null){
+                        DriverModel driver = driverRepository.findById(dto.driverId())
+                                .orElseThrow(() -> new ResourceNotFoundException("Motorista não encontrado"));
                         shipment.setDriver(driver);
                 }
 
-                if (orderId != null) {
-                        OrderModel order = orderRepository.findById(orderId)
-                                        .orElseThrow(() -> new ResourceNotFoundException("Pedido não encontrado"));
+                if (dto.orderId() != null){
+                        OrderModel order = orderRepository.findById(dto.orderId())
+                                .orElseThrow(() -> new ResourceNotFoundException("Pedido não encontrado"));
                         shipment.setOrder(order);
                 }
 
-                if (collaboratorId != null) {
-                        CollaboratorModel collaborator = collaboratorRepository.findById(collaboratorId)
-                                        .orElseThrow(() -> new ResourceNotFoundException("Colaborador não encontrado"));
+                if (dto.collaboratorId() != null){
+                        CollaboratorModel collaborator = collaboratorRepository.findById(dto.collaboratorId())
+                                .orElseThrow(() -> new ResourceNotFoundException("Colaborador não encontrado"));
                         shipment.setCollaborator(collaborator);
                 }
-
                 return shipmentRepository.save(shipment);
         }
+
+        //Deleter um Shipment
+        public void deleteShipment(Long id){
+             if (!shipmentRepository.existsById(id)) {
+                 throw new ResourceNotFoundException("Entrega não encontrada");
+             }
+             shipmentRepository.deleteById(id);
+        }
+
 
         public Page<ShipmentModel> findAll(Pageable pageable){
             return shipmentRepository.findAll(pageable);
         }
 }
+// End of ShipmentService
