@@ -60,11 +60,17 @@ public class FreightService {
     private void updateFields(FreightModel freight, FreightDTO dto) {
         if (dto.infoBasic() != null) freight.setInfoBasic(dto.infoBasic());
         if (dto.quantity() != null) freight.setQuantity(dto.quantity());
-        if (dto.value() != null)
-            freight.setValue(dto.value());
+        if (dto.value() != null) freight.setValue(dto.value());
+        if (dto.infoAdditional() != null) freight.setInfoAdditional(dto.infoAdditional());
 
-        if (dto.infoAdditional() != null)
-            freight.setInfoAdditional(dto.infoAdditional());
+        if (dto.clientId() != null) {
+            freight.setClient(clientRepository.findById(dto.clientId())
+                    .orElseThrow(() -> new ResourceNotFoundException("Cliente não encontrado com id: " + dto.clientId())));
+        }
 
+        if (dto.shipmentId() != null) {
+            freight.setShipment(shipmentRepository.findById(dto.shipmentId())
+                    .orElseThrow(() -> new ResourceNotFoundException("Remessa não encontrada com id: " + dto.shipmentId())));
+        }
     }
 }
