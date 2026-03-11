@@ -1,6 +1,7 @@
 package com.logistica.collaborator;
 
 import com.logistica.exception.ResourceNotFoundException;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -30,7 +31,7 @@ public class CollaboratorService {
     }
 
     //Obter todos os colaboradores
-    public List<CollaboratorDTO> getAllCollaborators() {
+    public List<CollaboratorDTO> getAllCollaborators(Pageable pageable) {
         return repository.findAll().stream().map(this::toDTO).collect(Collectors.toList());
     }
 
