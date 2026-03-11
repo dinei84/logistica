@@ -28,6 +28,7 @@ public class FreightModel {
     private BigDecimal value;
     private String infoAdditional;
 
+
     // Relacionamentos com outras entidades
     // As colunas FK (client_id, shipment_id) são gerenciadas pelo @JoinColumn
     @ManyToOne
@@ -49,22 +50,6 @@ public class FreightModel {
         this.value = value;
         this.infoAdditional = infoAdditional;
         this.client = client;
-        this.shipment = shipment;
-    }
-
-    public ClientModel getClient() {
-        return client;
-    }
-
-    public void setClient(ClientModel client) {
-        this.client = client;
-    }
-
-    public ShipmentModel getShipment() {
-        return shipment;
-    }
-
-    public void setShipment(ShipmentModel shipment) {
         this.shipment = shipment;
     }
 }
