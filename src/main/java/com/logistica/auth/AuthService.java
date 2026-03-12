@@ -3,6 +3,10 @@ package com.logistica.auth;
 import com.logistica.exception.BadRequestException;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import com.logistica.administrator.AdministratorModel;
+import com.logistica.administrator.AdministratorRepository;
+import com.logistica.collaborator.CollaboratorModel;
+import com.logistica.collaborator.CollaboratorRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -13,15 +17,21 @@ public class AuthService {
     private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
+    private final CollaboratorRepository collaboratorRepository;
+    private final AdministratorRepository administratorRepository;
 
     public AuthService(UserRepository userRepository,
                        PasswordEncoder passwordEncoder,
                        JwtService jwtService,
-                       AuthenticationManager authenticationManager) {
+                       AuthenticationManager authenticationManager,
+                       CollaboratorRepository collaboratorRepository,
+                       AdministratorRepository administratorRepository) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.jwtService = jwtService;
         this.authenticationManager = authenticationManager;
+        this.collaboratorRepository = collaboratorRepository;
+        this.administratorRepository = administratorRepository;
     }
 
     public AuthResponseDTO register(RegisterDTO dto) {
@@ -29,13 +39,24 @@ public class AuthService {
             throw new BadRequestException("Username já está em uso: " + dto.username());
         }
 
+        Role role = dto.role() != null ? dto.role() : Role.USER;
+
         UserModel user = new UserModel(
                 dto.username(),
                 passwordEncoder.encode(dto.password()),
-                Role.USER
+                role
         );
 
-        userRepository.save(user);
+        user = userRepository.save(user);
+
+        if (role == Role.ADMIN) {
+            AdministratorModel admin = new AdministratorModel(null, dto.nome(), user);
+            administratorRepository.save(admin);
+        } else {
+            CollaboratorModel collab = new CollaboratorModel(null, dto.nome(), user);
+            collaboratorRepository.save(collab);
+        }
+
         String token = jwtService.generateToken(user);
         return new AuthResponseDTO(token);
     }

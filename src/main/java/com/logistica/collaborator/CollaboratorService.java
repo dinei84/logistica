@@ -52,7 +52,7 @@ public class CollaboratorService {
     // Mapeadores entre DTO e Model
     private CollaboratorModel toModel(CollaboratorDTO dto) {
         if (dto == null) return null;
-        return new CollaboratorModel(dto.id(), dto.name());
+        return new CollaboratorModel(dto.id(), dto.name(), null);
     }
 
     private CollaboratorDTO toDTO(CollaboratorModel model) {

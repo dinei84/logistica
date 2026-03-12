@@ -1,4 +1,4 @@
-package com.logistica.collaborator;
+package com.logistica.administrator;
 
 import com.logistica.auth.UserModel;
 import jakarta.persistence.*;
@@ -6,8 +6,8 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "collaborator")
-public class CollaboratorModel {
+@Table(name = "administrator")
+public class AdministratorModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,13 +19,12 @@ public class CollaboratorModel {
     @JoinColumn(name = "user_id")
     private UserModel user;
 
-    public CollaboratorModel() {
+    public AdministratorModel() {
     }
 
-    public CollaboratorModel(Long id, String nome, UserModel user) {
+    public AdministratorModel(Long id, String nome, UserModel user) {
         this.id = id;
         this.nome = nome;
         this.user = user;
     }
-
 }
