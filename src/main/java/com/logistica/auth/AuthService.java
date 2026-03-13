@@ -9,6 +9,7 @@ import com.logistica.collaborator.CollaboratorModel;
 import com.logistica.collaborator.CollaboratorRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class AuthService {
@@ -34,6 +35,7 @@ public class AuthService {
         this.administratorRepository = administratorRepository;
     }
 
+    @Transactional
     public AuthResponseDTO register(RegisterDTO dto) {
         if (userRepository.findByUsername(dto.username()).isPresent()) {
             throw new BadRequestException("Username já está em uso: " + dto.username());
