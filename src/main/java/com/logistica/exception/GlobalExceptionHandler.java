@@ -3,6 +3,7 @@ package com.logistica.exception;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -44,6 +45,11 @@ public class GlobalExceptionHandler {
             HttpServletRequest request) {
         String message = "Content-Type '" + ex.getContentType() + "' não suportado. Use 'application/json'.";
         return buildResponse(HttpStatus.UNSUPPORTED_MEDIA_TYPE, message, request);
+    }
+
+    @ExceptionHandler(AccessDeniedException.class)
+    public ResponseEntity<ErrorResponse> handleAccessDenied(AccessDeniedException ex, HttpServletRequest request) {
+        return buildResponse(HttpStatus.FORBIDDEN, "Acesso negado: " + ex.getMessage(), request);
     }
 
     @ExceptionHandler(Exception.class)
