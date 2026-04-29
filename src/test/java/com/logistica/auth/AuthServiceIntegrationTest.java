@@ -1,6 +1,6 @@
 package com.logistica.auth;
 
-import com.logistica.collaborator.CollaboratorRepository;
+import com.logistica.controlelog.collaborator.CollaboratorRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

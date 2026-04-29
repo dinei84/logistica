@@ -1,0 +1,108 @@
+package com.logistica.controlelog.shipment;
+
+import java.time.LocalDate;
+import com.logistica.controlelog.collaborator.CollaboratorModel;
+import com.logistica.controlelog.driver.DriverModel;
+import com.logistica.controlelog.order.OrderModel;
+import com.logistica.controlelog.vehicle.VehicleModel;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name = "shipment")
+public class ShipmentModel {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private LocalDate date;
+
+    // APENAS os Relacionamentos
+    @ManyToOne
+    @JoinColumn(name = "vehicle_id")
+    private VehicleModel vehicle;
+
+    @ManyToOne
+    @JoinColumn(name = "driver_id")
+    private DriverModel driver;
+
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private OrderModel order;
+
+    @ManyToOne
+    @JoinColumn(name = "collaborator_id")
+    private CollaboratorModel collaborator;
+
+    public ShipmentModel() {
+    }
+
+    public ShipmentModel(Long id, LocalDate date, VehicleModel vehicle,
+            DriverModel driver, OrderModel order,
+            CollaboratorModel collaborator) {
+        this.id = id;
+        this.date = date;
+        this.vehicle = vehicle;
+        this.driver = driver;
+        this.order = order;
+        this.collaborator = collaborator;
+    }
+
+    // ✅ Getters e Setters (Lombok @Data já gera, mas se quiser explícitos:
+    public VehicleModel getVehicle() {
+        return vehicle;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setVehicle(VehicleModel vehicle) {
+        this.vehicle = vehicle;
+    }
+
+    public DriverModel getDriver() {
+        return driver;
+    }
+
+    public void setDriver(DriverModel driver) {
+        this.driver = driver;
+    }
+
+    public OrderModel getOrder() {
+        return order;
+    }
+
+    public void setOrder(OrderModel order) {
+        this.order = order;
+    }
+
+    public CollaboratorModel getCollaborator() {
+        return collaborator;
+    }
+
+    public void setCollaborator(CollaboratorModel collaborator) {
+        this.collaborator = collaborator;
+    }
+
+}

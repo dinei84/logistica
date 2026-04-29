@@ -1,0 +1,3362 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< com.logistica:demo >-------------------------
+[INFO] Building cargotecno 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.0.1:run (default-cli) > test-compile @ demo >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ demo ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ demo ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ demo ---
+[INFO] skip non existing resourceDirectory /home/dinei/Documentos/GitHub/logistica/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ demo ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:4.0.1:run (default-cli) < test-compile @ demo <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.0.1:run (default-cli) @ demo ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.1)
+
+2026-04-29T11:41:49.622-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Starting CargotecnoApplication using Java 21.0.10 with PID 62361 (/home/dinei/Documentos/GitHub/logistica/target/classes started by dinei in /home/dinei/Documentos/GitHub/logistica)
+2026-04-29T11:41:49.626-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-04-29T11:41:49.698-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-29T11:41:49.699-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-29T11:41:50.549-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-29T11:41:50.620-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 9 JPA repository interfaces.
+2026-04-29T11:41:51.329-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-29T11:41:51.342-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-29T11:41:51.343-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-04-29T11:41:51.374-03:00  INFO 62361 --- [cargotecno] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1674 ms
+2026-04-29T11:41:51.619-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-29T11:41:51.675-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-04-29T11:41:52.118-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-29T11:41:52.144-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-29T11:41:52.315-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:cargotecno user=SA
+2026-04-29T11:41:52.316-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-29T11:41:52.338-03:00  WARN 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-29T11:41:52.358-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:cargotecno]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CARGOTECNO/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-29T11:41:53.375-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+Hibernate: 
+    create table administrator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table client (
+        id bigint generated by default as identity,
+        email varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table collaborator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table driver (
+        id bigint generated by default as identity,
+        cpf varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table freight (
+        freight_value numeric(38,2),
+        quantity numeric(38,2),
+        client_id bigint,
+        id bigint generated by default as identity,
+        shipment_id bigint,
+        info_additional varchar(255),
+        info_basic varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table order_model (
+        id bigint generated by default as identity,
+        order_number varchar(255),
+        packaging varchar(255),
+        product varchar(255),
+        recipient varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table shipment (
+        date date,
+        collaborator_id bigint,
+        driver_id bigint,
+        id bigint generated by default as identity,
+        order_id bigint,
+        vehicle_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        id bigint generated by default as identity,
+        password varchar(255) not null,
+        username varchar(255) not null unique,
+        role enum ('ADMIN','USER') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table vehicle_model (
+        id bigint generated by default as identity,
+        plate varchar(255),
+        plate2 varchar(255),
+        plate3 varchar(255),
+        plate4 varchar(255),
+        vehicle_type varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists administrator 
+       add constraint FKbdejjchi6pj988cu0w34b7hau 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists collaborator 
+       add constraint FKny5owi7ohwcsatp0u5y78aqqg 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKryhl6w1x2oh4l9k4197e9fc27 
+       foreign key (client_id) 
+       references client
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKd3ubg697umrokxes7lok7vp3s 
+       foreign key (shipment_id) 
+       references shipment
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKg8onwgnlrf0un4rh6nd4ktfp 
+       foreign key (collaborator_id) 
+       references collaborator
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FK10jqvcs4icj20f3pxic9u2b4b 
+       foreign key (driver_id) 
+       references driver
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKqdjbk3sxcm7r6q3cpedmii8b4 
+       foreign key (order_id) 
+       references order_model
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKprufspoftux9cegqstermekqf 
+       foreign key (vehicle_id) 
+       references vehicle_model
+2026-04-29T11:41:53.450-03:00  INFO 62361 --- [cargotecno] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-29T11:41:53.551-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-29T11:41:53.922-03:00  INFO 62361 --- [cargotecno] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-04-29T11:41:54.197-03:00  WARN 62361 --- [cargotecno] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-29T11:41:54.904-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cargotecno'
+2026-04-29T11:41:54.994-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-29T11:41:55.095-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-29T11:41:55.106-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Started CargotecnoApplication in 5.841 seconds (process running for 6.309)
+2026-04-29T11:41:55.247-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-29T11:41:55.247-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-29T11:41:55.249-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-29T11:41:55.273-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] c.l.auth.JwtAuthenticationFilter         : JWT Filter: No Authorization header found or doesn't start with 'Bearer '
+Hibernate: 
+    select
+        um1_0.id,
+        um1_0.password,
+        um1_0.role,
+        um1_0.username 
+    from
+        users um1_0 
+    where
+        um1_0.username=?
+Hibernate: 
+    insert 
+    into
+        users
+        (password, role, username, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        administrator
+        (nome, user_id, id) 
+    values
+        (?, ?, default)
+2026-04-29T11:41:56.122-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-2] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Extracted username: admin
+Hibernate: 
+    select
+        um1_0.id,
+        um1_0.password,
+        um1_0.role,
+        um1_0.username 
+    from
+        users um1_0 
+    where
+        um1_0.username=?
+2026-04-29T11:41:56.166-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-2] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Loaded user: admin with authorities: [ROLE_ADMIN]
+2026-04-29T11:41:56.168-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-2] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Token valid: true
+2026-04-29T11:41:56.170-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-2] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Authentication set in SecurityContext with authorities: [ROLE_ADMIN]
+2026-04-29T11:42:05.089-03:00  WARN 62361 --- [cargotecno] [nio-8080-exec-3] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Error extracting username from token: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2026-04-29T11:42:22.277-03:00  WARN 62361 --- [cargotecno] [nio-8080-exec-4] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Error extracting username from token: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2026-04-29T11:42:49.378-03:00  INFO 62361 --- [cargotecno] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-29T11:42:49.382-03:00  INFO 62361 --- [cargotecno] [       Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-29T11:42:49.385-03:00  INFO 62361 --- [cargotecno] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-29T11:42:49.391-03:00  INFO 62361 --- [cargotecno] [       Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+2026-04-29T11:42:49.403-03:00  WARN 62361 --- [cargotecno] [       Thread-1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-04-29T11:42:49.404-03:00  INFO 62361 --- [cargotecno] [       Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-29T11:42:49.405-03:00  INFO 62361 --- [cargotecno] [       Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.1)
+
+2026-04-29T11:42:49.474-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Starting CargotecnoApplication using Java 21.0.10 with PID 62361 (/home/dinei/Documentos/GitHub/logistica/target/classes started by dinei in /home/dinei/Documentos/GitHub/logistica)
+2026-04-29T11:42:49.474-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-04-29T11:42:49.671-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-29T11:42:49.690-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 9 JPA repository interfaces.
+2026-04-29T11:42:49.908-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-29T11:42:49.910-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-29T11:42:49.910-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-04-29T11:42:49.920-03:00  INFO 62361 --- [cargotecno] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 444 ms
+2026-04-29T11:42:50.025-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-29T11:42:50.055-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-29T11:42:50.057-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-04-29T11:42:50.059-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:cargotecno user=SA
+2026-04-29T11:42:50.059-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-04-29T11:42:50.060-03:00  WARN 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-29T11:42:50.060-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:cargotecno]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CARGOTECNO/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-29T11:42:50.196-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+Hibernate: 
+    create table administrator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table client (
+        id bigint generated by default as identity,
+        email varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table collaborator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table driver (
+        id bigint generated by default as identity,
+        cpf varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table freight (
+        freight_value numeric(38,2),
+        quantity numeric(38,2),
+        client_id bigint,
+        id bigint generated by default as identity,
+        shipment_id bigint,
+        info_additional varchar(255),
+        info_basic varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table order_model (
+        id bigint generated by default as identity,
+        order_number varchar(255),
+        packaging varchar(255),
+        product varchar(255),
+        recipient varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table shipment (
+        date date,
+        collaborator_id bigint,
+        driver_id bigint,
+        id bigint generated by default as identity,
+        order_id bigint,
+        vehicle_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        id bigint generated by default as identity,
+        password varchar(255) not null,
+        username varchar(255) not null unique,
+        role enum ('ADMIN','USER') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table vehicle_model (
+        id bigint generated by default as identity,
+        plate varchar(255),
+        plate2 varchar(255),
+        plate3 varchar(255),
+        plate4 varchar(255),
+        vehicle_type varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists administrator 
+       add constraint FKbdejjchi6pj988cu0w34b7hau 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists collaborator 
+       add constraint FKny5owi7ohwcsatp0u5y78aqqg 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKryhl6w1x2oh4l9k4197e9fc27 
+       foreign key (client_id) 
+       references client
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKd3ubg697umrokxes7lok7vp3s 
+       foreign key (shipment_id) 
+       references shipment
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKg8onwgnlrf0un4rh6nd4ktfp 
+       foreign key (collaborator_id) 
+       references collaborator
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FK10jqvcs4icj20f3pxic9u2b4b 
+       foreign key (driver_id) 
+       references driver
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKqdjbk3sxcm7r6q3cpedmii8b4 
+       foreign key (order_id) 
+       references order_model
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKprufspoftux9cegqstermekqf 
+       foreign key (vehicle_id) 
+       references vehicle_model
+2026-04-29T11:42:50.217-03:00  INFO 62361 --- [cargotecno] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-29T11:42:50.374-03:00  INFO 62361 --- [cargotecno] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-04-29T11:42:50.589-03:00  WARN 62361 --- [cargotecno] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-29T11:42:51.026-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cargotecno'
+2026-04-29T11:42:51.080-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-29T11:42:51.123-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-29T11:42:51.127-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Started CargotecnoApplication in 1.673 seconds (process running for 62.33)
+2026-04-29T11:42:51.130-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-29T11:42:54.431-03:00  INFO 62361 --- [cargotecno] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-29T11:42:54.432-03:00  INFO 62361 --- [cargotecno] [       Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-29T11:42:54.434-03:00  INFO 62361 --- [cargotecno] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-29T11:42:54.438-03:00  INFO 62361 --- [cargotecno] [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+2026-04-29T11:42:54.442-03:00  WARN 62361 --- [cargotecno] [       Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-04-29T11:42:54.443-03:00  INFO 62361 --- [cargotecno] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-04-29T11:42:54.443-03:00  INFO 62361 --- [cargotecno] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.1)
+
+2026-04-29T11:42:54.516-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Starting CargotecnoApplication using Java 21.0.10 with PID 62361 (/home/dinei/Documentos/GitHub/logistica/target/classes started by dinei in /home/dinei/Documentos/GitHub/logistica)
+2026-04-29T11:42:54.516-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-04-29T11:42:54.678-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-29T11:42:54.692-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 9 JPA repository interfaces.
+2026-04-29T11:42:54.841-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-29T11:42:54.842-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-29T11:42:54.842-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-04-29T11:42:54.849-03:00  INFO 62361 --- [cargotecno] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 330 ms
+2026-04-29T11:42:54.945-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-29T11:42:54.968-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-29T11:42:54.969-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-04-29T11:42:54.971-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:cargotecno user=SA
+2026-04-29T11:42:54.971-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-04-29T11:42:54.971-03:00  WARN 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-29T11:42:54.972-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:cargotecno]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CARGOTECNO/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-29T11:42:55.063-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+Hibernate: 
+    create table administrator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table client (
+        id bigint generated by default as identity,
+        email varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table collaborator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table driver (
+        id bigint generated by default as identity,
+        cpf varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table freight (
+        freight_value numeric(38,2),
+        quantity numeric(38,2),
+        client_id bigint,
+        id bigint generated by default as identity,
+        shipment_id bigint,
+        info_additional varchar(255),
+        info_basic varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table order_model (
+        id bigint generated by default as identity,
+        order_number varchar(255),
+        packaging varchar(255),
+        product varchar(255),
+        recipient varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table shipment (
+        date date,
+        collaborator_id bigint,
+        driver_id bigint,
+        id bigint generated by default as identity,
+        order_id bigint,
+        vehicle_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        id bigint generated by default as identity,
+        password varchar(255) not null,
+        username varchar(255) not null unique,
+        role enum ('ADMIN','USER') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table vehicle_model (
+        id bigint generated by default as identity,
+        plate varchar(255),
+        plate2 varchar(255),
+        plate3 varchar(255),
+        plate4 varchar(255),
+        vehicle_type varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists administrator 
+       add constraint FKbdejjchi6pj988cu0w34b7hau 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists collaborator 
+       add constraint FKny5owi7ohwcsatp0u5y78aqqg 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKryhl6w1x2oh4l9k4197e9fc27 
+       foreign key (client_id) 
+       references client
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKd3ubg697umrokxes7lok7vp3s 
+       foreign key (shipment_id) 
+       references shipment
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKg8onwgnlrf0un4rh6nd4ktfp 
+       foreign key (collaborator_id) 
+       references collaborator
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FK10jqvcs4icj20f3pxic9u2b4b 
+       foreign key (driver_id) 
+       references driver
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKqdjbk3sxcm7r6q3cpedmii8b4 
+       foreign key (order_id) 
+       references order_model
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKprufspoftux9cegqstermekqf 
+       foreign key (vehicle_id) 
+       references vehicle_model
+2026-04-29T11:42:55.077-03:00  INFO 62361 --- [cargotecno] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-29T11:42:55.209-03:00  INFO 62361 --- [cargotecno] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-04-29T11:42:55.382-03:00  WARN 62361 --- [cargotecno] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-29T11:42:55.698-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cargotecno'
+2026-04-29T11:42:55.741-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-29T11:42:55.776-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-29T11:42:55.779-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Started CargotecnoApplication in 1.278 seconds (process running for 66.982)
+2026-04-29T11:42:55.781-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-29T11:42:57.426-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-29T11:42:57.426-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-29T11:42:57.429-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-04-29T11:42:57.432-03:00  WARN 62361 --- [cargotecno] [nio-8080-exec-1] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Error extracting username from token: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2026-04-29T11:43:20.129-03:00  INFO 62361 --- [cargotecno] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-29T11:43:20.130-03:00  INFO 62361 --- [cargotecno] [      Thread-10] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-29T11:43:20.131-03:00  INFO 62361 --- [cargotecno] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-29T11:43:20.134-03:00  INFO 62361 --- [cargotecno] [      Thread-10] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+2026-04-29T11:43:20.137-03:00  WARN 62361 --- [cargotecno] [      Thread-10] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-04-29T11:43:20.137-03:00  INFO 62361 --- [cargotecno] [      Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-04-29T11:43:20.137-03:00  INFO 62361 --- [cargotecno] [      Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.1)
+
+2026-04-29T11:43:20.194-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Starting CargotecnoApplication using Java 21.0.10 with PID 62361 (/home/dinei/Documentos/GitHub/logistica/target/classes started by dinei in /home/dinei/Documentos/GitHub/logistica)
+2026-04-29T11:43:20.194-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-04-29T11:43:20.338-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-29T11:43:20.354-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 9 JPA repository interfaces.
+2026-04-29T11:43:20.612-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-29T11:43:20.614-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-29T11:43:20.614-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-04-29T11:43:20.624-03:00  INFO 62361 --- [cargotecno] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 429 ms
+2026-04-29T11:43:20.742-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-29T11:43:20.770-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-29T11:43:20.771-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-04-29T11:43:20.772-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn30: url=jdbc:h2:mem:cargotecno user=SA
+2026-04-29T11:43:20.773-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-04-29T11:43:20.773-03:00  WARN 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-29T11:43:20.773-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:cargotecno]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CARGOTECNO/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-29T11:43:20.886-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+Hibernate: 
+    create table administrator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table client (
+        id bigint generated by default as identity,
+        email varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table collaborator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table driver (
+        id bigint generated by default as identity,
+        cpf varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table freight (
+        freight_value numeric(38,2),
+        quantity numeric(38,2),
+        client_id bigint,
+        id bigint generated by default as identity,
+        shipment_id bigint,
+        info_additional varchar(255),
+        info_basic varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table order_model (
+        id bigint generated by default as identity,
+        order_number varchar(255),
+        packaging varchar(255),
+        product varchar(255),
+        recipient varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table shipment (
+        date date,
+        collaborator_id bigint,
+        driver_id bigint,
+        id bigint generated by default as identity,
+        order_id bigint,
+        vehicle_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        id bigint generated by default as identity,
+        password varchar(255) not null,
+        username varchar(255) not null unique,
+        role enum ('ADMIN','USER') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table vehicle_model (
+        id bigint generated by default as identity,
+        plate varchar(255),
+        plate2 varchar(255),
+        plate3 varchar(255),
+        plate4 varchar(255),
+        vehicle_type varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists administrator 
+       add constraint FKbdejjchi6pj988cu0w34b7hau 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists collaborator 
+       add constraint FKny5owi7ohwcsatp0u5y78aqqg 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKryhl6w1x2oh4l9k4197e9fc27 
+       foreign key (client_id) 
+       references client
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKd3ubg697umrokxes7lok7vp3s 
+       foreign key (shipment_id) 
+       references shipment
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKg8onwgnlrf0un4rh6nd4ktfp 
+       foreign key (collaborator_id) 
+       references collaborator
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FK10jqvcs4icj20f3pxic9u2b4b 
+       foreign key (driver_id) 
+       references driver
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKqdjbk3sxcm7r6q3cpedmii8b4 
+       foreign key (order_id) 
+       references order_model
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKprufspoftux9cegqstermekqf 
+       foreign key (vehicle_id) 
+       references vehicle_model
+2026-04-29T11:43:20.906-03:00  INFO 62361 --- [cargotecno] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-29T11:43:21.054-03:00  INFO 62361 --- [cargotecno] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-04-29T11:43:21.243-03:00  WARN 62361 --- [cargotecno] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-29T11:43:21.590-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cargotecno'
+2026-04-29T11:43:21.636-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-29T11:43:21.674-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-29T11:43:21.677-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Started CargotecnoApplication in 1.497 seconds (process running for 92.88)
+2026-04-29T11:43:21.679-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-29T11:43:36.446-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-29T11:43:36.447-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-29T11:43:36.449-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-04-29T11:43:36.451-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] c.l.auth.JwtAuthenticationFilter         : JWT Filter: No Authorization header found or doesn't start with 'Bearer '
+AuthController: getCurrentUser called
+AuthController: authentication = AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+AuthController: authenticated = true
+AuthController: name = anonymousUser
+AuthController: authorities = [ROLE_ANONYMOUS]
+2026-04-29T11:43:40.015-03:00  INFO 62361 --- [cargotecno] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-29T11:43:40.017-03:00  INFO 62361 --- [cargotecno] [      Thread-14] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-29T11:43:40.019-03:00  INFO 62361 --- [cargotecno] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-29T11:43:40.022-03:00  INFO 62361 --- [cargotecno] [      Thread-14] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+2026-04-29T11:43:40.024-03:00  WARN 62361 --- [cargotecno] [      Thread-14] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-04-29T11:43:40.024-03:00  INFO 62361 --- [cargotecno] [      Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-04-29T11:43:40.025-03:00  INFO 62361 --- [cargotecno] [      Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.1)
+
+2026-04-29T11:43:40.097-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Starting CargotecnoApplication using Java 21.0.10 with PID 62361 (/home/dinei/Documentos/GitHub/logistica/target/classes started by dinei in /home/dinei/Documentos/GitHub/logistica)
+2026-04-29T11:43:40.097-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-04-29T11:43:40.267-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-29T11:43:40.282-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 9 JPA repository interfaces.
+2026-04-29T11:43:40.461-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-29T11:43:40.462-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-29T11:43:40.463-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-04-29T11:43:40.474-03:00  INFO 62361 --- [cargotecno] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 375 ms
+2026-04-29T11:43:40.571-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-29T11:43:40.594-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-29T11:43:40.595-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-04-29T11:43:40.597-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn40: url=jdbc:h2:mem:cargotecno user=SA
+2026-04-29T11:43:40.597-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-04-29T11:43:40.598-03:00  WARN 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-29T11:43:40.598-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:cargotecno]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CARGOTECNO/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-29T11:43:40.689-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+Hibernate: 
+    create table administrator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table client (
+        id bigint generated by default as identity,
+        email varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table collaborator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table driver (
+        id bigint generated by default as identity,
+        cpf varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table freight (
+        freight_value numeric(38,2),
+        quantity numeric(38,2),
+        client_id bigint,
+        id bigint generated by default as identity,
+        shipment_id bigint,
+        info_additional varchar(255),
+        info_basic varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table order_model (
+        id bigint generated by default as identity,
+        order_number varchar(255),
+        packaging varchar(255),
+        product varchar(255),
+        recipient varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table shipment (
+        date date,
+        collaborator_id bigint,
+        driver_id bigint,
+        id bigint generated by default as identity,
+        order_id bigint,
+        vehicle_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        id bigint generated by default as identity,
+        password varchar(255) not null,
+        username varchar(255) not null unique,
+        role enum ('ADMIN','USER') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table vehicle_model (
+        id bigint generated by default as identity,
+        plate varchar(255),
+        plate2 varchar(255),
+        plate3 varchar(255),
+        plate4 varchar(255),
+        vehicle_type varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists administrator 
+       add constraint FKbdejjchi6pj988cu0w34b7hau 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists collaborator 
+       add constraint FKny5owi7ohwcsatp0u5y78aqqg 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKryhl6w1x2oh4l9k4197e9fc27 
+       foreign key (client_id) 
+       references client
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKd3ubg697umrokxes7lok7vp3s 
+       foreign key (shipment_id) 
+       references shipment
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKg8onwgnlrf0un4rh6nd4ktfp 
+       foreign key (collaborator_id) 
+       references collaborator
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FK10jqvcs4icj20f3pxic9u2b4b 
+       foreign key (driver_id) 
+       references driver
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKqdjbk3sxcm7r6q3cpedmii8b4 
+       foreign key (order_id) 
+       references order_model
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKprufspoftux9cegqstermekqf 
+       foreign key (vehicle_id) 
+       references vehicle_model
+2026-04-29T11:43:40.703-03:00  INFO 62361 --- [cargotecno] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-29T11:43:40.855-03:00  INFO 62361 --- [cargotecno] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-04-29T11:43:41.054-03:00  WARN 62361 --- [cargotecno] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-29T11:43:41.413-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cargotecno'
+2026-04-29T11:43:41.458-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-29T11:43:41.498-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-29T11:43:41.503-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Started CargotecnoApplication in 1.422 seconds (process running for 112.706)
+2026-04-29T11:43:41.505-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-29T11:44:56.385-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-29T11:44:56.386-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-29T11:44:56.389-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-04-29T11:44:56.391-03:00  WARN 62361 --- [cargotecno] [nio-8080-exec-1] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Error extracting username from token: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+AuthController: getCurrentUser called
+AuthController: authentication = AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+AuthController: authenticated = true
+AuthController: name = anonymousUser
+AuthController: authorities = [ROLE_ANONYMOUS]
+2026-04-29T11:45:05.918-03:00  INFO 62361 --- [cargotecno] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-29T11:45:05.919-03:00  INFO 62361 --- [cargotecno] [      Thread-18] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-29T11:45:05.920-03:00  INFO 62361 --- [cargotecno] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-29T11:45:05.922-03:00  INFO 62361 --- [cargotecno] [      Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+2026-04-29T11:45:05.924-03:00  WARN 62361 --- [cargotecno] [      Thread-18] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-04-29T11:45:05.925-03:00  INFO 62361 --- [cargotecno] [      Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-04-29T11:45:05.925-03:00  INFO 62361 --- [cargotecno] [      Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.1)
+
+2026-04-29T11:45:05.995-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Starting CargotecnoApplication using Java 21.0.10 with PID 62361 (/home/dinei/Documentos/GitHub/logistica/target/classes started by dinei in /home/dinei/Documentos/GitHub/logistica)
+2026-04-29T11:45:05.995-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-04-29T11:45:06.137-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-29T11:45:06.156-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 9 JPA repository interfaces.
+2026-04-29T11:45:06.344-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-29T11:45:06.346-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-29T11:45:06.346-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-04-29T11:45:06.355-03:00  INFO 62361 --- [cargotecno] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 358 ms
+2026-04-29T11:45:06.446-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-29T11:45:06.476-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-29T11:45:06.477-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-04-29T11:45:06.479-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn50: url=jdbc:h2:mem:cargotecno user=SA
+2026-04-29T11:45:06.479-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-04-29T11:45:06.480-03:00  WARN 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-29T11:45:06.480-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:cargotecno]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CARGOTECNO/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-29T11:45:06.583-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+Hibernate: 
+    create table administrator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table client (
+        id bigint generated by default as identity,
+        email varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table collaborator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table driver (
+        id bigint generated by default as identity,
+        cpf varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table freight (
+        freight_value numeric(38,2),
+        quantity numeric(38,2),
+        client_id bigint,
+        id bigint generated by default as identity,
+        shipment_id bigint,
+        info_additional varchar(255),
+        info_basic varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table order_model (
+        id bigint generated by default as identity,
+        order_number varchar(255),
+        packaging varchar(255),
+        product varchar(255),
+        recipient varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table shipment (
+        date date,
+        collaborator_id bigint,
+        driver_id bigint,
+        id bigint generated by default as identity,
+        order_id bigint,
+        vehicle_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        id bigint generated by default as identity,
+        password varchar(255) not null,
+        username varchar(255) not null unique,
+        role enum ('ADMIN','USER') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table vehicle_model (
+        id bigint generated by default as identity,
+        plate varchar(255),
+        plate2 varchar(255),
+        plate3 varchar(255),
+        plate4 varchar(255),
+        vehicle_type varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists administrator 
+       add constraint FKbdejjchi6pj988cu0w34b7hau 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists collaborator 
+       add constraint FKny5owi7ohwcsatp0u5y78aqqg 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKryhl6w1x2oh4l9k4197e9fc27 
+       foreign key (client_id) 
+       references client
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKd3ubg697umrokxes7lok7vp3s 
+       foreign key (shipment_id) 
+       references shipment
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKg8onwgnlrf0un4rh6nd4ktfp 
+       foreign key (collaborator_id) 
+       references collaborator
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FK10jqvcs4icj20f3pxic9u2b4b 
+       foreign key (driver_id) 
+       references driver
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKqdjbk3sxcm7r6q3cpedmii8b4 
+       foreign key (order_id) 
+       references order_model
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKprufspoftux9cegqstermekqf 
+       foreign key (vehicle_id) 
+       references vehicle_model
+2026-04-29T11:45:06.601-03:00  INFO 62361 --- [cargotecno] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-29T11:45:06.749-03:00  INFO 62361 --- [cargotecno] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-04-29T11:45:06.934-03:00  WARN 62361 --- [cargotecno] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-29T11:45:07.285-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cargotecno'
+2026-04-29T11:45:07.328-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-29T11:45:07.368-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-29T11:45:07.372-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Started CargotecnoApplication in 1.392 seconds (process running for 198.575)
+2026-04-29T11:45:07.373-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-29T11:45:10.545-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-29T11:45:10.545-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-29T11:45:10.546-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-29T11:45:10.551-03:00  WARN 62361 --- [cargotecno] [nio-8080-exec-1] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Error extracting username from token: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+AuthController: getCurrentUser called
+AuthController: authentication = AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+AuthController: authenticated = true
+AuthController: name = anonymousUser
+AuthController: authorities = [ROLE_ANONYMOUS]
+2026-04-29T11:45:12.690-03:00  INFO 62361 --- [cargotecno] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-29T11:45:12.692-03:00  INFO 62361 --- [cargotecno] [      Thread-22] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-29T11:45:12.693-03:00  INFO 62361 --- [cargotecno] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-29T11:45:12.695-03:00  INFO 62361 --- [cargotecno] [      Thread-22] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+2026-04-29T11:45:12.699-03:00  WARN 62361 --- [cargotecno] [      Thread-22] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-04-29T11:45:12.699-03:00  INFO 62361 --- [cargotecno] [      Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-04-29T11:45:12.700-03:00  INFO 62361 --- [cargotecno] [      Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.1)
+
+2026-04-29T11:45:12.786-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Starting CargotecnoApplication using Java 21.0.10 with PID 62361 (/home/dinei/Documentos/GitHub/logistica/target/classes started by dinei in /home/dinei/Documentos/GitHub/logistica)
+2026-04-29T11:45:12.786-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-04-29T11:45:12.954-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-29T11:45:12.968-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 9 JPA repository interfaces.
+2026-04-29T11:45:13.122-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-29T11:45:13.123-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-29T11:45:13.123-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-04-29T11:45:13.129-03:00  INFO 62361 --- [cargotecno] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 340 ms
+2026-04-29T11:45:13.224-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-29T11:45:13.249-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-29T11:45:13.250-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-04-29T11:45:13.252-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection conn60: url=jdbc:h2:mem:cargotecno user=SA
+2026-04-29T11:45:13.252-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-04-29T11:45:13.253-03:00  WARN 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-29T11:45:13.254-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:cargotecno]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CARGOTECNO/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-29T11:45:13.346-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+Hibernate: 
+    create table administrator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table client (
+        id bigint generated by default as identity,
+        email varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table collaborator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table driver (
+        id bigint generated by default as identity,
+        cpf varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table freight (
+        freight_value numeric(38,2),
+        quantity numeric(38,2),
+        client_id bigint,
+        id bigint generated by default as identity,
+        shipment_id bigint,
+        info_additional varchar(255),
+        info_basic varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table order_model (
+        id bigint generated by default as identity,
+        order_number varchar(255),
+        packaging varchar(255),
+        product varchar(255),
+        recipient varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table shipment (
+        date date,
+        collaborator_id bigint,
+        driver_id bigint,
+        id bigint generated by default as identity,
+        order_id bigint,
+        vehicle_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        id bigint generated by default as identity,
+        password varchar(255) not null,
+        username varchar(255) not null unique,
+        role enum ('ADMIN','USER') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table vehicle_model (
+        id bigint generated by default as identity,
+        plate varchar(255),
+        plate2 varchar(255),
+        plate3 varchar(255),
+        plate4 varchar(255),
+        vehicle_type varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists administrator 
+       add constraint FKbdejjchi6pj988cu0w34b7hau 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists collaborator 
+       add constraint FKny5owi7ohwcsatp0u5y78aqqg 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKryhl6w1x2oh4l9k4197e9fc27 
+       foreign key (client_id) 
+       references client
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKd3ubg697umrokxes7lok7vp3s 
+       foreign key (shipment_id) 
+       references shipment
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKg8onwgnlrf0un4rh6nd4ktfp 
+       foreign key (collaborator_id) 
+       references collaborator
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FK10jqvcs4icj20f3pxic9u2b4b 
+       foreign key (driver_id) 
+       references driver
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKqdjbk3sxcm7r6q3cpedmii8b4 
+       foreign key (order_id) 
+       references order_model
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKprufspoftux9cegqstermekqf 
+       foreign key (vehicle_id) 
+       references vehicle_model
+2026-04-29T11:45:13.362-03:00  INFO 62361 --- [cargotecno] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-29T11:45:13.510-03:00  INFO 62361 --- [cargotecno] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-04-29T11:45:13.747-03:00  WARN 62361 --- [cargotecno] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-29T11:45:14.112-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cargotecno'
+2026-04-29T11:45:14.172-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-29T11:45:14.243-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-29T11:45:14.249-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Started CargotecnoApplication in 1.48 seconds (process running for 205.452)
+2026-04-29T11:45:14.251-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-29T11:45:18.110-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-29T11:45:18.110-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-29T11:45:18.112-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-29T11:45:18.113-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] c.l.auth.JwtAuthenticationFilter         : JWT Filter: No Authorization header found or doesn't start with 'Bearer '
+Hibernate: 
+    select
+        um1_0.id,
+        um1_0.password,
+        um1_0.role,
+        um1_0.username 
+    from
+        users um1_0 
+    where
+        um1_0.username=?
+Hibernate: 
+    insert 
+    into
+        users
+        (password, role, username, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        administrator
+        (nome, user_id, id) 
+    values
+        (?, ?, default)
+2026-04-29T11:45:18.233-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-3] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Extracted username: admin
+Hibernate: 
+    select
+        um1_0.id,
+        um1_0.password,
+        um1_0.role,
+        um1_0.username 
+    from
+        users um1_0 
+    where
+        um1_0.username=?
+2026-04-29T11:45:18.267-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-3] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Loaded user: admin with authorities: [ROLE_ADMIN]
+2026-04-29T11:45:18.269-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-3] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Token valid: true
+2026-04-29T11:45:18.270-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-3] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Authentication set in SecurityContext with authorities: [ROLE_ADMIN]
+AuthController: getCurrentUser called
+AuthController: authentication = UsernamePasswordAuthenticationToken [Principal=UserModel(id=1, username=admin, password=$2a$10$bu9Fz0WBI8GSCgpH6j3CUe6Rzzl9hn5BGKlWK4RveKXMUW9A3Q4fi, role=ADMIN), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+AuthController: authenticated = true
+AuthController: name = admin
+AuthController: authorities = [ROLE_ADMIN]
+2026-04-29T11:45:23.947-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-5] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Extracted username: admin
+Hibernate: 
+    select
+        um1_0.id,
+        um1_0.password,
+        um1_0.role,
+        um1_0.username 
+    from
+        users um1_0 
+    where
+        um1_0.username=?
+2026-04-29T11:45:23.949-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-5] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Loaded user: admin with authorities: [ROLE_ADMIN]
+2026-04-29T11:45:23.951-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-5] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Token valid: true
+2026-04-29T11:45:23.952-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-5] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Authentication set in SecurityContext with authorities: [ROLE_ADMIN]
+AuthController: getCurrentUser called
+AuthController: authentication = UsernamePasswordAuthenticationToken [Principal=UserModel(id=1, username=admin, password=$2a$10$bu9Fz0WBI8GSCgpH6j3CUe6Rzzl9hn5BGKlWK4RveKXMUW9A3Q4fi, role=ADMIN), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+AuthController: authenticated = true
+AuthController: name = admin
+AuthController: authorities = [ROLE_ADMIN]
+2026-04-29T11:45:40.395-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-6] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Extracted username: admin
+Hibernate: 
+    select
+        um1_0.id,
+        um1_0.password,
+        um1_0.role,
+        um1_0.username 
+    from
+        users um1_0 
+    where
+        um1_0.username=?
+2026-04-29T11:45:40.397-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-6] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Loaded user: admin with authorities: [ROLE_ADMIN]
+2026-04-29T11:45:40.398-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-6] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Token valid: true
+2026-04-29T11:45:40.399-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-6] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Authentication set in SecurityContext with authorities: [ROLE_ADMIN]
+Hibernate: 
+    select
+        cm1_0.id,
+        cm1_0.email,
+        cm1_0.name,
+        cm1_0.phone 
+    from
+        client cm1_0
+2026-04-29T11:45:50.557-03:00  INFO 62361 --- [cargotecno] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-29T11:45:50.559-03:00  INFO 62361 --- [cargotecno] [      Thread-26] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-29T11:45:50.560-03:00  INFO 62361 --- [cargotecno] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-29T11:45:50.563-03:00  INFO 62361 --- [cargotecno] [      Thread-26] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+2026-04-29T11:45:50.567-03:00  WARN 62361 --- [cargotecno] [      Thread-26] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-04-29T11:45:50.568-03:00  INFO 62361 --- [cargotecno] [      Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2026-04-29T11:45:50.568-03:00  INFO 62361 --- [cargotecno] [      Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.1)
+
+2026-04-29T11:45:50.625-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Starting CargotecnoApplication using Java 21.0.10 with PID 62361 (/home/dinei/Documentos/GitHub/logistica/target/classes started by dinei in /home/dinei/Documentos/GitHub/logistica)
+2026-04-29T11:45:50.625-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-04-29T11:45:50.764-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-29T11:45:50.777-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 9 JPA repository interfaces.
+2026-04-29T11:45:50.906-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-29T11:45:50.907-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-29T11:45:50.907-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-04-29T11:45:50.913-03:00  INFO 62361 --- [cargotecno] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 286 ms
+2026-04-29T11:45:50.984-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-29T11:45:51.003-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-29T11:45:51.003-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2026-04-29T11:45:51.005-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection conn70: url=jdbc:h2:mem:cargotecno user=SA
+2026-04-29T11:45:51.005-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2026-04-29T11:45:51.005-03:00  WARN 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-29T11:45:51.005-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:cargotecno]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CARGOTECNO/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-29T11:45:51.110-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+Hibernate: 
+    create table administrator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table client (
+        id bigint generated by default as identity,
+        email varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table collaborator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table driver (
+        id bigint generated by default as identity,
+        cpf varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table freight (
+        freight_value numeric(38,2),
+        quantity numeric(38,2),
+        client_id bigint,
+        id bigint generated by default as identity,
+        shipment_id bigint,
+        info_additional varchar(255),
+        info_basic varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table order_model (
+        id bigint generated by default as identity,
+        order_number varchar(255),
+        packaging varchar(255),
+        product varchar(255),
+        recipient varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table shipment (
+        date date,
+        collaborator_id bigint,
+        driver_id bigint,
+        id bigint generated by default as identity,
+        order_id bigint,
+        vehicle_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        id bigint generated by default as identity,
+        password varchar(255) not null,
+        username varchar(255) not null unique,
+        role enum ('ADMIN','USER') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table vehicle_model (
+        id bigint generated by default as identity,
+        plate varchar(255),
+        plate2 varchar(255),
+        plate3 varchar(255),
+        plate4 varchar(255),
+        vehicle_type varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists administrator 
+       add constraint FKbdejjchi6pj988cu0w34b7hau 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists collaborator 
+       add constraint FKny5owi7ohwcsatp0u5y78aqqg 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKryhl6w1x2oh4l9k4197e9fc27 
+       foreign key (client_id) 
+       references client
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKd3ubg697umrokxes7lok7vp3s 
+       foreign key (shipment_id) 
+       references shipment
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKg8onwgnlrf0un4rh6nd4ktfp 
+       foreign key (collaborator_id) 
+       references collaborator
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FK10jqvcs4icj20f3pxic9u2b4b 
+       foreign key (driver_id) 
+       references driver
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKqdjbk3sxcm7r6q3cpedmii8b4 
+       foreign key (order_id) 
+       references order_model
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKprufspoftux9cegqstermekqf 
+       foreign key (vehicle_id) 
+       references vehicle_model
+2026-04-29T11:45:51.130-03:00  INFO 62361 --- [cargotecno] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-29T11:45:51.272-03:00  INFO 62361 --- [cargotecno] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-04-29T11:45:51.454-03:00  WARN 62361 --- [cargotecno] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-29T11:45:51.794-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cargotecno'
+2026-04-29T11:45:51.839-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-29T11:45:51.877-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-29T11:45:51.880-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Started CargotecnoApplication in 1.265 seconds (process running for 243.082)
+2026-04-29T11:45:51.881-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-29T11:45:57.199-03:00  INFO 62361 --- [cargotecno] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-29T11:45:57.200-03:00  INFO 62361 --- [cargotecno] [      Thread-30] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-29T11:45:57.201-03:00  INFO 62361 --- [cargotecno] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-29T11:45:57.204-03:00  INFO 62361 --- [cargotecno] [      Thread-30] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+2026-04-29T11:45:57.206-03:00  WARN 62361 --- [cargotecno] [      Thread-30] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-04-29T11:45:57.206-03:00  INFO 62361 --- [cargotecno] [      Thread-30] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2026-04-29T11:45:57.206-03:00  INFO 62361 --- [cargotecno] [      Thread-30] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.1)
+
+2026-04-29T11:45:57.264-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Starting CargotecnoApplication using Java 21.0.10 with PID 62361 (/home/dinei/Documentos/GitHub/logistica/target/classes started by dinei in /home/dinei/Documentos/GitHub/logistica)
+2026-04-29T11:45:57.264-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-04-29T11:45:57.390-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-29T11:45:57.402-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 9 JPA repository interfaces.
+2026-04-29T11:45:57.561-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-29T11:45:57.562-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-29T11:45:57.562-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-04-29T11:45:57.569-03:00  INFO 62361 --- [cargotecno] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 304 ms
+2026-04-29T11:45:57.657-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-29T11:45:57.684-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-29T11:45:57.685-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2026-04-29T11:45:57.687-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection conn80: url=jdbc:h2:mem:cargotecno user=SA
+2026-04-29T11:45:57.688-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2026-04-29T11:45:57.688-03:00  WARN 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-29T11:45:57.689-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:cargotecno]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CARGOTECNO/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-29T11:45:57.786-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+Hibernate: 
+    create table administrator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table client (
+        id bigint generated by default as identity,
+        email varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table collaborator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table driver (
+        id bigint generated by default as identity,
+        cpf varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table freight (
+        freight_value numeric(38,2),
+        quantity numeric(38,2),
+        client_id bigint,
+        id bigint generated by default as identity,
+        shipment_id bigint,
+        info_additional varchar(255),
+        info_basic varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table order_model (
+        id bigint generated by default as identity,
+        order_number varchar(255),
+        packaging varchar(255),
+        product varchar(255),
+        recipient varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table shipment (
+        date date,
+        collaborator_id bigint,
+        driver_id bigint,
+        id bigint generated by default as identity,
+        order_id bigint,
+        vehicle_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        id bigint generated by default as identity,
+        password varchar(255) not null,
+        username varchar(255) not null unique,
+        role enum ('ADMIN','USER') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table vehicle_model (
+        id bigint generated by default as identity,
+        plate varchar(255),
+        plate2 varchar(255),
+        plate3 varchar(255),
+        plate4 varchar(255),
+        vehicle_type varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists administrator 
+       add constraint FKbdejjchi6pj988cu0w34b7hau 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists collaborator 
+       add constraint FKny5owi7ohwcsatp0u5y78aqqg 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKryhl6w1x2oh4l9k4197e9fc27 
+       foreign key (client_id) 
+       references client
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKd3ubg697umrokxes7lok7vp3s 
+       foreign key (shipment_id) 
+       references shipment
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKg8onwgnlrf0un4rh6nd4ktfp 
+       foreign key (collaborator_id) 
+       references collaborator
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FK10jqvcs4icj20f3pxic9u2b4b 
+       foreign key (driver_id) 
+       references driver
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKqdjbk3sxcm7r6q3cpedmii8b4 
+       foreign key (order_id) 
+       references order_model
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKprufspoftux9cegqstermekqf 
+       foreign key (vehicle_id) 
+       references vehicle_model
+2026-04-29T11:45:57.796-03:00  INFO 62361 --- [cargotecno] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-29T11:45:57.938-03:00  INFO 62361 --- [cargotecno] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-04-29T11:45:58.127-03:00  WARN 62361 --- [cargotecno] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-29T11:45:58.462-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cargotecno'
+2026-04-29T11:45:58.504-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-29T11:45:58.545-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-29T11:45:58.547-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Started CargotecnoApplication in 1.294 seconds (process running for 249.75)
+2026-04-29T11:45:58.550-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-29T11:46:03.868-03:00  INFO 62361 --- [cargotecno] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-29T11:46:03.869-03:00  INFO 62361 --- [cargotecno] [      Thread-34] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-29T11:46:03.871-03:00  INFO 62361 --- [cargotecno] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-29T11:46:03.875-03:00  INFO 62361 --- [cargotecno] [      Thread-34] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+2026-04-29T11:46:03.877-03:00  WARN 62361 --- [cargotecno] [      Thread-34] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-04-29T11:46:03.878-03:00  INFO 62361 --- [cargotecno] [      Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2026-04-29T11:46:03.878-03:00  INFO 62361 --- [cargotecno] [      Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.1)
+
+2026-04-29T11:46:03.951-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Starting CargotecnoApplication using Java 21.0.10 with PID 62361 (/home/dinei/Documentos/GitHub/logistica/target/classes started by dinei in /home/dinei/Documentos/GitHub/logistica)
+2026-04-29T11:46:03.951-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-04-29T11:46:04.091-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-29T11:46:04.103-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 9 JPA repository interfaces.
+2026-04-29T11:46:04.230-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-29T11:46:04.231-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-29T11:46:04.231-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-04-29T11:46:04.240-03:00  INFO 62361 --- [cargotecno] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 287 ms
+2026-04-29T11:46:04.340-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-29T11:46:04.374-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-29T11:46:04.375-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2026-04-29T11:46:04.377-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection conn90: url=jdbc:h2:mem:cargotecno user=SA
+2026-04-29T11:46:04.378-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2026-04-29T11:46:04.378-03:00  WARN 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-29T11:46:04.378-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:cargotecno]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CARGOTECNO/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-29T11:46:04.456-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+Hibernate: 
+    create table administrator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table client (
+        id bigint generated by default as identity,
+        email varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table collaborator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table driver (
+        id bigint generated by default as identity,
+        cpf varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table freight (
+        freight_value numeric(38,2),
+        quantity numeric(38,2),
+        client_id bigint,
+        id bigint generated by default as identity,
+        shipment_id bigint,
+        info_additional varchar(255),
+        info_basic varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table order_model (
+        id bigint generated by default as identity,
+        order_number varchar(255),
+        packaging varchar(255),
+        product varchar(255),
+        recipient varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table shipment (
+        date date,
+        collaborator_id bigint,
+        driver_id bigint,
+        id bigint generated by default as identity,
+        order_id bigint,
+        vehicle_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        id bigint generated by default as identity,
+        password varchar(255) not null,
+        username varchar(255) not null unique,
+        role enum ('ADMIN','USER') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table vehicle_model (
+        id bigint generated by default as identity,
+        plate varchar(255),
+        plate2 varchar(255),
+        plate3 varchar(255),
+        plate4 varchar(255),
+        vehicle_type varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists administrator 
+       add constraint FKbdejjchi6pj988cu0w34b7hau 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists collaborator 
+       add constraint FKny5owi7ohwcsatp0u5y78aqqg 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKryhl6w1x2oh4l9k4197e9fc27 
+       foreign key (client_id) 
+       references client
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKd3ubg697umrokxes7lok7vp3s 
+       foreign key (shipment_id) 
+       references shipment
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKg8onwgnlrf0un4rh6nd4ktfp 
+       foreign key (collaborator_id) 
+       references collaborator
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FK10jqvcs4icj20f3pxic9u2b4b 
+       foreign key (driver_id) 
+       references driver
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKqdjbk3sxcm7r6q3cpedmii8b4 
+       foreign key (order_id) 
+       references order_model
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKprufspoftux9cegqstermekqf 
+       foreign key (vehicle_id) 
+       references vehicle_model
+2026-04-29T11:46:04.468-03:00  INFO 62361 --- [cargotecno] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-29T11:46:04.597-03:00  INFO 62361 --- [cargotecno] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-04-29T11:46:04.798-03:00  WARN 62361 --- [cargotecno] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-29T11:46:05.380-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cargotecno'
+2026-04-29T11:46:05.439-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-29T11:46:05.480-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-29T11:46:05.484-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Started CargotecnoApplication in 1.546 seconds (process running for 256.687)
+2026-04-29T11:46:05.487-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-29T11:46:06.779-03:00  INFO 62361 --- [cargotecno] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2026-04-29T11:46:06.780-03:00  INFO 62361 --- [cargotecno] [      Thread-38] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-29T11:46:06.781-03:00  INFO 62361 --- [cargotecno] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-29T11:46:06.785-03:00  INFO 62361 --- [cargotecno] [      Thread-38] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+2026-04-29T11:46:06.790-03:00  WARN 62361 --- [cargotecno] [      Thread-38] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-04-29T11:46:06.790-03:00  INFO 62361 --- [cargotecno] [      Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2026-04-29T11:46:06.791-03:00  INFO 62361 --- [cargotecno] [      Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.1)
+
+2026-04-29T11:46:06.867-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Starting CargotecnoApplication using Java 21.0.10 with PID 62361 (/home/dinei/Documentos/GitHub/logistica/target/classes started by dinei in /home/dinei/Documentos/GitHub/logistica)
+2026-04-29T11:46:06.868-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-04-29T11:46:07.038-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-29T11:46:07.052-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 9 JPA repository interfaces.
+2026-04-29T11:46:07.206-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-29T11:46:07.207-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-29T11:46:07.207-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-04-29T11:46:07.213-03:00  INFO 62361 --- [cargotecno] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 344 ms
+2026-04-29T11:46:07.331-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-29T11:46:07.358-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-29T11:46:07.359-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2026-04-29T11:46:07.360-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection conn100: url=jdbc:h2:mem:cargotecno user=SA
+2026-04-29T11:46:07.361-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2026-04-29T11:46:07.361-03:00  WARN 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-29T11:46:07.361-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:cargotecno]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CARGOTECNO/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-29T11:46:07.451-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+Hibernate: 
+    create table administrator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table client (
+        id bigint generated by default as identity,
+        email varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table collaborator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table driver (
+        id bigint generated by default as identity,
+        cpf varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table freight (
+        freight_value numeric(38,2),
+        quantity numeric(38,2),
+        client_id bigint,
+        id bigint generated by default as identity,
+        shipment_id bigint,
+        info_additional varchar(255),
+        info_basic varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table order_model (
+        id bigint generated by default as identity,
+        order_number varchar(255),
+        packaging varchar(255),
+        product varchar(255),
+        recipient varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table shipment (
+        date date,
+        collaborator_id bigint,
+        driver_id bigint,
+        id bigint generated by default as identity,
+        order_id bigint,
+        vehicle_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        id bigint generated by default as identity,
+        password varchar(255) not null,
+        username varchar(255) not null unique,
+        role enum ('ADMIN','USER') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table vehicle_model (
+        id bigint generated by default as identity,
+        plate varchar(255),
+        plate2 varchar(255),
+        plate3 varchar(255),
+        plate4 varchar(255),
+        vehicle_type varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists administrator 
+       add constraint FKbdejjchi6pj988cu0w34b7hau 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists collaborator 
+       add constraint FKny5owi7ohwcsatp0u5y78aqqg 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKryhl6w1x2oh4l9k4197e9fc27 
+       foreign key (client_id) 
+       references client
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKd3ubg697umrokxes7lok7vp3s 
+       foreign key (shipment_id) 
+       references shipment
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKg8onwgnlrf0un4rh6nd4ktfp 
+       foreign key (collaborator_id) 
+       references collaborator
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FK10jqvcs4icj20f3pxic9u2b4b 
+       foreign key (driver_id) 
+       references driver
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKqdjbk3sxcm7r6q3cpedmii8b4 
+       foreign key (order_id) 
+       references order_model
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKprufspoftux9cegqstermekqf 
+       foreign key (vehicle_id) 
+       references vehicle_model
+2026-04-29T11:46:07.461-03:00  INFO 62361 --- [cargotecno] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-29T11:46:07.602-03:00  INFO 62361 --- [cargotecno] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-04-29T11:46:07.805-03:00  WARN 62361 --- [cargotecno] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-29T11:46:08.156-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cargotecno'
+2026-04-29T11:46:08.205-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-29T11:46:08.243-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-29T11:46:08.246-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Started CargotecnoApplication in 1.394 seconds (process running for 259.449)
+2026-04-29T11:46:08.247-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-29T11:46:13.562-03:00  INFO 62361 --- [cargotecno] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-29T11:46:13.563-03:00  INFO 62361 --- [cargotecno] [      Thread-42] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-29T11:46:13.564-03:00  INFO 62361 --- [cargotecno] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-29T11:46:13.567-03:00  INFO 62361 --- [cargotecno] [      Thread-42] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+2026-04-29T11:46:13.569-03:00  WARN 62361 --- [cargotecno] [      Thread-42] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-04-29T11:46:13.570-03:00  INFO 62361 --- [cargotecno] [      Thread-42] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2026-04-29T11:46:13.571-03:00  INFO 62361 --- [cargotecno] [      Thread-42] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.1)
+
+2026-04-29T11:46:13.659-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Starting CargotecnoApplication using Java 21.0.10 with PID 62361 (/home/dinei/Documentos/GitHub/logistica/target/classes started by dinei in /home/dinei/Documentos/GitHub/logistica)
+2026-04-29T11:46:13.659-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-04-29T11:46:13.842-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-29T11:46:13.858-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 9 JPA repository interfaces.
+2026-04-29T11:46:14.008-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-29T11:46:14.008-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-29T11:46:14.008-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-04-29T11:46:14.014-03:00  INFO 62361 --- [cargotecno] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 353 ms
+2026-04-29T11:46:14.106-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-29T11:46:14.127-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-29T11:46:14.128-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2026-04-29T11:46:14.129-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Added connection conn110: url=jdbc:h2:mem:cargotecno user=SA
+2026-04-29T11:46:14.129-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2026-04-29T11:46:14.130-03:00  WARN 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-29T11:46:14.130-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:cargotecno]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CARGOTECNO/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-29T11:46:14.210-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+Hibernate: 
+    create table administrator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table client (
+        id bigint generated by default as identity,
+        email varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table collaborator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table driver (
+        id bigint generated by default as identity,
+        cpf varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table freight (
+        freight_value numeric(38,2),
+        quantity numeric(38,2),
+        client_id bigint,
+        id bigint generated by default as identity,
+        shipment_id bigint,
+        info_additional varchar(255),
+        info_basic varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table order_model (
+        id bigint generated by default as identity,
+        order_number varchar(255),
+        packaging varchar(255),
+        product varchar(255),
+        recipient varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table shipment (
+        date date,
+        collaborator_id bigint,
+        driver_id bigint,
+        id bigint generated by default as identity,
+        order_id bigint,
+        vehicle_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        id bigint generated by default as identity,
+        password varchar(255) not null,
+        username varchar(255) not null unique,
+        role enum ('ADMIN','USER') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table vehicle_model (
+        id bigint generated by default as identity,
+        plate varchar(255),
+        plate2 varchar(255),
+        plate3 varchar(255),
+        plate4 varchar(255),
+        vehicle_type varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists administrator 
+       add constraint FKbdejjchi6pj988cu0w34b7hau 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists collaborator 
+       add constraint FKny5owi7ohwcsatp0u5y78aqqg 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKryhl6w1x2oh4l9k4197e9fc27 
+       foreign key (client_id) 
+       references client
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKd3ubg697umrokxes7lok7vp3s 
+       foreign key (shipment_id) 
+       references shipment
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKg8onwgnlrf0un4rh6nd4ktfp 
+       foreign key (collaborator_id) 
+       references collaborator
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FK10jqvcs4icj20f3pxic9u2b4b 
+       foreign key (driver_id) 
+       references driver
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKqdjbk3sxcm7r6q3cpedmii8b4 
+       foreign key (order_id) 
+       references order_model
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKprufspoftux9cegqstermekqf 
+       foreign key (vehicle_id) 
+       references vehicle_model
+2026-04-29T11:46:14.219-03:00  INFO 62361 --- [cargotecno] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-29T11:46:14.351-03:00  INFO 62361 --- [cargotecno] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-04-29T11:46:14.536-03:00  WARN 62361 --- [cargotecno] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-29T11:46:14.877-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cargotecno'
+2026-04-29T11:46:14.926-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-29T11:46:14.967-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-29T11:46:14.973-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Started CargotecnoApplication in 1.331 seconds (process running for 266.176)
+2026-04-29T11:46:14.984-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-29T11:46:22.287-03:00  INFO 62361 --- [cargotecno] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-29T11:46:22.289-03:00  INFO 62361 --- [cargotecno] [      Thread-46] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-29T11:46:22.291-03:00  INFO 62361 --- [cargotecno] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-29T11:46:22.293-03:00  INFO 62361 --- [cargotecno] [      Thread-46] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+2026-04-29T11:46:22.295-03:00  WARN 62361 --- [cargotecno] [      Thread-46] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-04-29T11:46:22.295-03:00  INFO 62361 --- [cargotecno] [      Thread-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2026-04-29T11:46:22.295-03:00  INFO 62361 --- [cargotecno] [      Thread-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.1)
+
+2026-04-29T11:46:22.379-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Starting CargotecnoApplication using Java 21.0.10 with PID 62361 (/home/dinei/Documentos/GitHub/logistica/target/classes started by dinei in /home/dinei/Documentos/GitHub/logistica)
+2026-04-29T11:46:22.379-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-04-29T11:46:22.537-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-29T11:46:22.550-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 9 JPA repository interfaces.
+2026-04-29T11:46:22.702-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-29T11:46:22.702-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-29T11:46:22.702-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-04-29T11:46:22.710-03:00  INFO 62361 --- [cargotecno] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 330 ms
+2026-04-29T11:46:22.823-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-29T11:46:22.857-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-29T11:46:22.857-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2026-04-29T11:46:22.859-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-13 - Added connection conn120: url=jdbc:h2:mem:cargotecno user=SA
+2026-04-29T11:46:22.859-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2026-04-29T11:46:22.859-03:00  WARN 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-29T11:46:22.860-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:cargotecno]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CARGOTECNO/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-29T11:46:22.947-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+Hibernate: 
+    create table administrator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table client (
+        id bigint generated by default as identity,
+        email varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table collaborator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table driver (
+        id bigint generated by default as identity,
+        cpf varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table freight (
+        freight_value numeric(38,2),
+        quantity numeric(38,2),
+        client_id bigint,
+        id bigint generated by default as identity,
+        shipment_id bigint,
+        info_additional varchar(255),
+        info_basic varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table order_model (
+        id bigint generated by default as identity,
+        order_number varchar(255),
+        packaging varchar(255),
+        product varchar(255),
+        recipient varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table shipment (
+        date date,
+        collaborator_id bigint,
+        driver_id bigint,
+        id bigint generated by default as identity,
+        order_id bigint,
+        vehicle_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        id bigint generated by default as identity,
+        password varchar(255) not null,
+        username varchar(255) not null unique,
+        role enum ('ADMIN','USER') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table vehicle_model (
+        id bigint generated by default as identity,
+        plate varchar(255),
+        plate2 varchar(255),
+        plate3 varchar(255),
+        plate4 varchar(255),
+        vehicle_type varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists administrator 
+       add constraint FKbdejjchi6pj988cu0w34b7hau 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists collaborator 
+       add constraint FKny5owi7ohwcsatp0u5y78aqqg 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKryhl6w1x2oh4l9k4197e9fc27 
+       foreign key (client_id) 
+       references client
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKd3ubg697umrokxes7lok7vp3s 
+       foreign key (shipment_id) 
+       references shipment
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKg8onwgnlrf0un4rh6nd4ktfp 
+       foreign key (collaborator_id) 
+       references collaborator
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FK10jqvcs4icj20f3pxic9u2b4b 
+       foreign key (driver_id) 
+       references driver
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKqdjbk3sxcm7r6q3cpedmii8b4 
+       foreign key (order_id) 
+       references order_model
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKprufspoftux9cegqstermekqf 
+       foreign key (vehicle_id) 
+       references vehicle_model
+2026-04-29T11:46:22.959-03:00  INFO 62361 --- [cargotecno] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-29T11:46:23.112-03:00  INFO 62361 --- [cargotecno] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-04-29T11:46:23.301-03:00  WARN 62361 --- [cargotecno] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-29T11:46:23.693-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cargotecno'
+2026-04-29T11:46:23.761-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-29T11:46:23.809-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-29T11:46:23.812-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Started CargotecnoApplication in 1.448 seconds (process running for 275.015)
+2026-04-29T11:46:23.813-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-29T11:46:25.092-03:00  INFO 62361 --- [cargotecno] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-29T11:46:25.093-03:00  INFO 62361 --- [cargotecno] [      Thread-50] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-29T11:46:25.095-03:00  INFO 62361 --- [cargotecno] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-29T11:46:25.097-03:00  INFO 62361 --- [cargotecno] [      Thread-50] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+2026-04-29T11:46:25.099-03:00  WARN 62361 --- [cargotecno] [      Thread-50] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-04-29T11:46:25.099-03:00  INFO 62361 --- [cargotecno] [      Thread-50] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2026-04-29T11:46:25.100-03:00  INFO 62361 --- [cargotecno] [      Thread-50] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.1)
+
+2026-04-29T11:46:25.167-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Starting CargotecnoApplication using Java 21.0.10 with PID 62361 (/home/dinei/Documentos/GitHub/logistica/target/classes started by dinei in /home/dinei/Documentos/GitHub/logistica)
+2026-04-29T11:46:25.167-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-04-29T11:46:25.313-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-29T11:46:25.326-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 9 JPA repository interfaces.
+2026-04-29T11:46:25.458-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-29T11:46:25.459-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-29T11:46:25.459-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-04-29T11:46:25.465-03:00  INFO 62361 --- [cargotecno] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 296 ms
+2026-04-29T11:46:25.563-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-29T11:46:25.586-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-29T11:46:25.587-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2026-04-29T11:46:25.588-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-14 - Added connection conn130: url=jdbc:h2:mem:cargotecno user=SA
+2026-04-29T11:46:25.589-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2026-04-29T11:46:25.589-03:00  WARN 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-29T11:46:25.590-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:cargotecno]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CARGOTECNO/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-29T11:46:25.668-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+Hibernate: 
+    create table administrator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table client (
+        id bigint generated by default as identity,
+        email varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table collaborator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table driver (
+        id bigint generated by default as identity,
+        cpf varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table freight (
+        freight_value numeric(38,2),
+        quantity numeric(38,2),
+        client_id bigint,
+        id bigint generated by default as identity,
+        shipment_id bigint,
+        info_additional varchar(255),
+        info_basic varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table order_model (
+        id bigint generated by default as identity,
+        order_number varchar(255),
+        packaging varchar(255),
+        product varchar(255),
+        recipient varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table shipment (
+        date date,
+        collaborator_id bigint,
+        driver_id bigint,
+        id bigint generated by default as identity,
+        order_id bigint,
+        vehicle_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        id bigint generated by default as identity,
+        password varchar(255) not null,
+        username varchar(255) not null unique,
+        role enum ('ADMIN','USER') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table vehicle_model (
+        id bigint generated by default as identity,
+        plate varchar(255),
+        plate2 varchar(255),
+        plate3 varchar(255),
+        plate4 varchar(255),
+        vehicle_type varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists administrator 
+       add constraint FKbdejjchi6pj988cu0w34b7hau 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists collaborator 
+       add constraint FKny5owi7ohwcsatp0u5y78aqqg 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKryhl6w1x2oh4l9k4197e9fc27 
+       foreign key (client_id) 
+       references client
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKd3ubg697umrokxes7lok7vp3s 
+       foreign key (shipment_id) 
+       references shipment
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKg8onwgnlrf0un4rh6nd4ktfp 
+       foreign key (collaborator_id) 
+       references collaborator
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FK10jqvcs4icj20f3pxic9u2b4b 
+       foreign key (driver_id) 
+       references driver
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKqdjbk3sxcm7r6q3cpedmii8b4 
+       foreign key (order_id) 
+       references order_model
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKprufspoftux9cegqstermekqf 
+       foreign key (vehicle_id) 
+       references vehicle_model
+2026-04-29T11:46:25.675-03:00  INFO 62361 --- [cargotecno] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-29T11:46:25.833-03:00  INFO 62361 --- [cargotecno] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-04-29T11:46:26.022-03:00  WARN 62361 --- [cargotecno] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-29T11:46:26.401-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cargotecno'
+2026-04-29T11:46:26.447-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-29T11:46:26.488-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-29T11:46:26.491-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Started CargotecnoApplication in 1.335 seconds (process running for 277.694)
+2026-04-29T11:46:26.492-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-29T11:46:41.795-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-29T11:46:41.795-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-29T11:46:41.797-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-04-29T11:46:41.798-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] c.l.auth.JwtAuthenticationFilter         : JWT Filter: No Authorization header found or doesn't start with 'Bearer '
+Hibernate: 
+    select
+        um1_0.id,
+        um1_0.password,
+        um1_0.role,
+        um1_0.username 
+    from
+        users um1_0 
+    where
+        um1_0.username=?
+2026-04-29T11:46:42.016-03:00  WARN 62361 --- [cargotecno] [nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Usuário inexistente ou senha inválida]
+2026-04-29T11:46:42.027-03:00  WARN 62361 --- [cargotecno] [nio-8080-exec-2] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Error extracting username from token: Compact JWT strings may not contain whitespace.
+2026-04-29T11:46:42.039-03:00  WARN 62361 --- [cargotecno] [nio-8080-exec-3] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Error extracting username from token: Compact JWT strings may not contain whitespace.
+2026-04-29T11:46:48.828-03:00  INFO 62361 --- [cargotecno] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-29T11:46:48.829-03:00  INFO 62361 --- [cargotecno] [      Thread-54] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-29T11:46:48.830-03:00  INFO 62361 --- [cargotecno] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-29T11:46:48.833-03:00  INFO 62361 --- [cargotecno] [      Thread-54] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+2026-04-29T11:46:48.835-03:00  WARN 62361 --- [cargotecno] [      Thread-54] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-04-29T11:46:48.836-03:00  INFO 62361 --- [cargotecno] [      Thread-54] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2026-04-29T11:46:48.836-03:00  INFO 62361 --- [cargotecno] [      Thread-54] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.1)
+
+2026-04-29T11:46:48.923-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Starting CargotecnoApplication using Java 21.0.10 with PID 62361 (/home/dinei/Documentos/GitHub/logistica/target/classes started by dinei in /home/dinei/Documentos/GitHub/logistica)
+2026-04-29T11:46:48.923-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-04-29T11:46:49.092-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-29T11:46:49.107-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 9 JPA repository interfaces.
+2026-04-29T11:46:49.275-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-29T11:46:49.276-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-29T11:46:49.276-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-04-29T11:46:49.282-03:00  INFO 62361 --- [cargotecno] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 357 ms
+2026-04-29T11:46:49.381-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-29T11:46:49.406-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-29T11:46:49.407-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
+2026-04-29T11:46:49.409-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-15 - Added connection conn140: url=jdbc:h2:mem:cargotecno user=SA
+2026-04-29T11:46:49.409-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
+2026-04-29T11:46:49.409-03:00  WARN 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-29T11:46:49.410-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:cargotecno]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CARGOTECNO/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-29T11:46:49.519-03:00  INFO 62361 --- [cargotecno] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+Hibernate: 
+    create table administrator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table client (
+        id bigint generated by default as identity,
+        email varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table collaborator (
+        id bigint generated by default as identity,
+        user_id bigint unique,
+        nome varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table driver (
+        id bigint generated by default as identity,
+        cpf varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table freight (
+        freight_value numeric(38,2),
+        quantity numeric(38,2),
+        client_id bigint,
+        id bigint generated by default as identity,
+        shipment_id bigint,
+        info_additional varchar(255),
+        info_basic varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table order_model (
+        id bigint generated by default as identity,
+        order_number varchar(255),
+        packaging varchar(255),
+        product varchar(255),
+        recipient varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table shipment (
+        date date,
+        collaborator_id bigint,
+        driver_id bigint,
+        id bigint generated by default as identity,
+        order_id bigint,
+        vehicle_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        id bigint generated by default as identity,
+        password varchar(255) not null,
+        username varchar(255) not null unique,
+        role enum ('ADMIN','USER') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table vehicle_model (
+        id bigint generated by default as identity,
+        plate varchar(255),
+        plate2 varchar(255),
+        plate3 varchar(255),
+        plate4 varchar(255),
+        vehicle_type varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists administrator 
+       add constraint FKbdejjchi6pj988cu0w34b7hau 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists collaborator 
+       add constraint FKny5owi7ohwcsatp0u5y78aqqg 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKryhl6w1x2oh4l9k4197e9fc27 
+       foreign key (client_id) 
+       references client
+Hibernate: 
+    alter table if exists freight 
+       add constraint FKd3ubg697umrokxes7lok7vp3s 
+       foreign key (shipment_id) 
+       references shipment
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKg8onwgnlrf0un4rh6nd4ktfp 
+       foreign key (collaborator_id) 
+       references collaborator
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FK10jqvcs4icj20f3pxic9u2b4b 
+       foreign key (driver_id) 
+       references driver
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKqdjbk3sxcm7r6q3cpedmii8b4 
+       foreign key (order_id) 
+       references order_model
+Hibernate: 
+    alter table if exists shipment 
+       add constraint FKprufspoftux9cegqstermekqf 
+       foreign key (vehicle_id) 
+       references vehicle_model
+2026-04-29T11:46:49.530-03:00  INFO 62361 --- [cargotecno] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-29T11:46:49.675-03:00  INFO 62361 --- [cargotecno] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-04-29T11:46:49.892-03:00  WARN 62361 --- [cargotecno] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-29T11:46:50.268-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cargotecno'
+2026-04-29T11:46:50.315-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-29T11:46:50.355-03:00  INFO 62361 --- [cargotecno] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-29T11:46:50.358-03:00  INFO 62361 --- [cargotecno] [  restartedMain] com.logistica.CargotecnoApplication      : Started CargotecnoApplication in 1.449 seconds (process running for 301.561)
+2026-04-29T11:46:50.359-03:00  INFO 62361 --- [cargotecno] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-29T11:47:45.722-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-29T11:47:45.722-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-29T11:47:45.726-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-04-29T11:47:45.730-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-1] c.l.auth.JwtAuthenticationFilter         : JWT Filter: No Authorization header found or doesn't start with 'Bearer '
+Hibernate: 
+    select
+        um1_0.id,
+        um1_0.password,
+        um1_0.role,
+        um1_0.username 
+    from
+        users um1_0 
+    where
+        um1_0.username=?
+Hibernate: 
+    insert 
+    into
+        users
+        (password, role, username, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        administrator
+        (nome, user_id, id) 
+    values
+        (?, ?, default)
+2026-04-29T11:47:45.861-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-2] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Extracted username: admin
+Hibernate: 
+    select
+        um1_0.id,
+        um1_0.password,
+        um1_0.role,
+        um1_0.username 
+    from
+        users um1_0 
+    where
+        um1_0.username=?
+2026-04-29T11:47:45.897-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-2] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Loaded user: admin with authorities: [ROLE_ADMIN]
+2026-04-29T11:47:45.898-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-2] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Authentication set in SecurityContext with authorities: [ROLE_ADMIN]
+2026-04-29T11:47:45.967-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-4] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Extracted username: admin
+Hibernate: 
+    select
+        um1_0.id,
+        um1_0.password,
+        um1_0.role,
+        um1_0.username 
+    from
+        users um1_0 
+    where
+        um1_0.username=?
+2026-04-29T11:47:45.970-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-4] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Loaded user: admin with authorities: [ROLE_ADMIN]
+2026-04-29T11:47:45.972-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-4] c.l.auth.JwtAuthenticationFilter         : JWT Filter: Authentication set in SecurityContext with authorities: [ROLE_ADMIN]
+Hibernate: 
+    select
+        cm1_0.id,
+        cm1_0.email,
+        cm1_0.name,
+        cm1_0.phone 
+    from
+        client cm1_0
+2026-04-29T11:49:27.025-03:00  INFO 62361 --- [cargotecno] [nio-8080-exec-6] c.l.auth.JwtAuthenticationFilter         : JWT Filter: No Authorization header found or doesn't start with 'Bearer '
+2026-04-29T11:49:37.534-03:00  INFO 62361 --- [cargotecno] [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-29T11:49:37.535-03:00  INFO 62361 --- [cargotecno] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-29T11:49:37.541-03:00  INFO 62361 --- [cargotecno] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    drop table if exists administrator cascade 
+Hibernate: 
+    drop table if exists client cascade 
+Hibernate: 
+    drop table if exists collaborator cascade 
+Hibernate: 
+    drop table if exists driver cascade 
+Hibernate: 
+    drop table if exists freight cascade 
+Hibernate: 
+    drop table if exists order_model cascade 
+Hibernate: 
+    drop table if exists shipment cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists vehicle_model cascade 
+2026-04-29T11:49:37.544-03:00  WARN 62361 --- [cargotecno] [ionShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-04-29T11:49:37.544-03:00  INFO 62361 --- [cargotecno] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
+2026-04-29T11:49:37.545-03:00  INFO 62361 --- [cargotecno] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.

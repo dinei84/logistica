@@ -1,12 +1,12 @@
 package com.logistica.auth;
 
-import com.logistica.exception.BadRequestException;
+import com.logistica.controlelog.exception.BadRequestException;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import com.logistica.administrator.AdministratorModel;
 import com.logistica.administrator.AdministratorRepository;
-import com.logistica.collaborator.CollaboratorModel;
-import com.logistica.collaborator.CollaboratorRepository;
+import com.logistica.controlelog.collaborator.CollaboratorModel;
+import com.logistica.controlelog.collaborator.CollaboratorRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -55,7 +55,9 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             return;
         }
 
-        if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+        if (username != null && (SecurityContextHolder.getContext().getAuthentication() == null || 
+            SecurityContextHolder.getContext().getAuthentication().getAuthorities().stream()
+                .anyMatch(auth -> auth.getAuthority().equals("ROLE_ANONYMOUS")))) {
             UserDetails userDetails = userDetailsService.loadUserByUsername(username);
             logger.info("JWT Filter: Loaded user: " + username + " with authorities: " + userDetails.getAuthorities());
 
