@@ -17,7 +17,7 @@ public class CollaboratorModel {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
-    private UserModel user;
+    private UserModel users;
 
     public CollaboratorModel() {
     }
@@ -25,7 +25,7 @@ public class CollaboratorModel {
     public CollaboratorModel(Long id, String nome, UserModel user) {
         this.id = id;
         this.nome = nome;
-        this.user = user;
+        this.users = user;
     }
 
 }

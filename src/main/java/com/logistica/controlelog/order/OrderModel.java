@@ -1,10 +1,6 @@
 package com.logistica.controlelog.order;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,13 +9,14 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
+@Table(name = "orders")
 public class OrderModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "order_number") //numero da ordem
+    @Column(name = "order_number") //numero do pedido
     private String orderNumber;
 
     @Column(name = "product") //produto
