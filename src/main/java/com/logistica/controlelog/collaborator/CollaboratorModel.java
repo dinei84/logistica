@@ -13,19 +13,20 @@ public class CollaboratorModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nome;
+    @Column(name = "name")
+    private String name;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
-    private UserModel users;
+    private UserModel user;
 
     public CollaboratorModel() {
     }
 
-    public CollaboratorModel(Long id, String nome, UserModel user) {
+    public CollaboratorModel(Long id, String name, UserModel user) {
         this.id = id;
-        this.nome = nome;
-        this.users = user;
+        this.name = name;
+        this.user = user;
     }
 
 }

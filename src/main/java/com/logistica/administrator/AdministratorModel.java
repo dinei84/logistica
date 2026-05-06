@@ -13,7 +13,8 @@ public class AdministratorModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nome;
+    @Column(name = "name")
+    private String name;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
@@ -22,9 +23,9 @@ public class AdministratorModel {
     public AdministratorModel() {
     }
 
-    public AdministratorModel(Long id, String nome, UserModel user) {
+    public AdministratorModel(Long id, String name, UserModel user) {
         this.id = id;
-        this.nome = nome;
+        this.name = name;
         this.user = user;
     }
 }

@@ -57,7 +57,12 @@ public class SecurityConfig {
         return http.build();
     }
 
-// Ocultado o AuthenticationProvider, usaremos a auto-configuração do Spring Boot
+    @Bean
+    public DaoAuthenticationProvider authenticationProvider() {
+        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider(userDetailsService);
+        authProvider.setPasswordEncoder(passwordEncoder());
+        return authProvider;
+    }
 
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {

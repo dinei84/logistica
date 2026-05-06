@@ -52,10 +52,10 @@ public class AuthService {
         user = userRepository.save(user);
 
         if (role == Role.ADMIN) {
-            AdministratorModel admin = new AdministratorModel(null, dto.nome(), user);
+            AdministratorModel admin = new AdministratorModel(null, dto.name(), user);
             administratorRepository.save(admin);
         } else {
-            CollaboratorModel collab = new CollaboratorModel(null, dto.nome(), user);
+            CollaboratorModel collab = new CollaboratorModel(null, dto.name(), user);
             collaboratorRepository.save(collab);
         }
 

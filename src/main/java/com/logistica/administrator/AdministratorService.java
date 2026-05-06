@@ -39,7 +39,7 @@ public class AdministratorService {
     public AdministratorDTO updateAdministrator(Long id, AdministratorDTO administrator) {
         AdministratorModel model = repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Administrador não encontrado"));
-        model.setNome(administrator.name());
+        model.setName(administrator.name());
         AdministratorModel saved = repository.save(model);
         return toDTO(saved);
     }
@@ -57,6 +57,6 @@ public class AdministratorService {
 
     private AdministratorDTO toDTO(AdministratorModel model) {
         if (model == null) return null;
-        return new AdministratorDTO(model.getId(), model.getNome());
+        return new AdministratorDTO(model.getId(), model.getName());
     }
 }

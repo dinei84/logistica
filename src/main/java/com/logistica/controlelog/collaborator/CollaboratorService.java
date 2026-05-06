@@ -39,7 +39,7 @@ public class CollaboratorService {
     public CollaboratorDTO updateCollaborator(Long id, CollaboratorDTO collaborator) {
         CollaboratorModel model = repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Colaborador não encontrado"));
-        model.setNome(collaborator.name());
+        model.setName(collaborator.name());
         CollaboratorModel saved = repository.save(model);
         return toDTO(saved);
     }
@@ -57,7 +57,7 @@ public class CollaboratorService {
 
     private CollaboratorDTO toDTO(CollaboratorModel model) {
         if (model == null) return null;
-        return new CollaboratorDTO(model.getId(), model.getNome());
+        return new CollaboratorDTO(model.getId(), model.getName());
     }
 }
 
