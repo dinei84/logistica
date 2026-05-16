@@ -1,5 +1,7 @@
 package com.logistica.controlelog.collaborator;
 
+import com.logistica.auth.UserModel;
+import com.logistica.auth.UserRepository;
 import com.logistica.controlelog.exception.ResourceNotFoundException;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -11,9 +13,11 @@ import java.util.stream.Collectors;
 public class CollaboratorService {
 
     public final CollaboratorRepository repository;
+    private final UserRepository userRepository;
 
-    public CollaboratorService(CollaboratorRepository repository) {
+    public CollaboratorService(CollaboratorRepository repository, UserRepository userRepository) {
         this.repository = repository;
+        this.userRepository = userRepository;
     }
 
     //Adicionar um novo colaborador
@@ -52,13 +56,17 @@ public class CollaboratorService {
     // Mapeadores entre DTO e Model
     private CollaboratorModel toModel(CollaboratorDTO dto) {
         if (dto == null) return null;
-        return new CollaboratorModel(dto.id(), dto.name(), null);
+        UserModel user = null;
+        if (dto.userId() != null) {
+            user = userRepository.findById(dto.userId())
+                    .orElseThrow(() -> new ResourceNotFoundException("Usuário não encontrado"));
+        }
+        return new CollaboratorModel(dto.id(), dto.name(), user);
     }
 
     private CollaboratorDTO toDTO(CollaboratorModel model) {
         if (model == null) return null;
-        return new CollaboratorDTO(model.getId(), model.getName());
+        Long userId = model.getUser() != null ? model.getUser().getId() : null;
+        return new CollaboratorDTO(model.getId(), model.getName(), userId);
     }
 }
-
-

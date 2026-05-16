@@ -8,10 +8,18 @@ CREATE TABLE IF NOT EXISTS `clients` (
 
 CREATE TABLE IF NOT EXISTS `users` (
     `id` BIGINT NOT NULL AUTO_INCREMENT,
-    `username` VARCHAR(80) NOT NULL,
+    `username` VARCHAR(80) NOT NULL UNIQUE,
     `password` VARCHAR(80) NOT NULL,
     `role` VARCHAR(80) NOT NULL,
     PRIMARY KEY (`id`)
+);
+
+CREATE TABLE IF NOT EXISTS `administrator` (
+    `id` BIGINT NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(80) NOT NULL,
+    `user_id` BIGINT NOT NULL,
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 );
 
 CREATE TABLE IF NOT EXISTS `collaborator` (
