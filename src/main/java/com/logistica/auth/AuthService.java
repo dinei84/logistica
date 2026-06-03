@@ -1,6 +1,6 @@
 package com.logistica.auth;
 
-import com.logistica.exception.BadRequestException;
+import com.logistica.controlelog.exception.BadRequestException;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import com.logistica.administrator.AdministratorModel;

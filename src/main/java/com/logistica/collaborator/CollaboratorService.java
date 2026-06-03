@@ -1,6 +1,6 @@
 package com.logistica.collaborator;
 
-import com.logistica.exception.ResourceNotFoundException;
+import com.logistica.controlelog.exception.ResourceNotFoundException;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 

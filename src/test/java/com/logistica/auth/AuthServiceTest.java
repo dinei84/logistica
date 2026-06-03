@@ -2,7 +2,7 @@ package com.logistica.auth;
 
 import com.logistica.administrator.AdministratorRepository;
 import com.logistica.collaborator.CollaboratorRepository;
-import com.logistica.exception.BadRequestException;
+import com.logistica.controlelog.exception.BadRequestException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
